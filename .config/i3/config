@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Monaco 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -176,6 +176,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
+# 窗口颜色                边框    背景     文字     提示
+client.focused          #880000 #000000 #ff0000 #ff0000
+client.focused_inactive #000000 #000000 #008800 #3399FF
+client.unfocused        #000000 #000000 #009999 #3399FF
+client.urgent           #990000 #990000 #000000 #990000
+client.placeholder      #000000 #000000 #000000 #000000
+client.background       #000000
+
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -191,10 +200,10 @@ bar {
     colors {
         background #000000
         statusline #ffffff
-
-        focused_workspace  #ffffff #285577
-        active_workspace   #ffffff #333333
-        inactive_workspace #888888 #222222
-        urgent_workspace   #ffffff #900000
+ 		# 工作区颜色         边框    背景     文字
+        focused_workspace  #ffffff #ff0000 #ffffff
+        active_workspace   #000088 #008800 #880000
+        inactive_workspace #888888 #222222 #008800
+        urgent_workspace   #ffffff #900000 #ff0000
     }
 }
