@@ -14,4 +14,4 @@ highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=darkred guibg=NONE guifg=
 let g:Lf_ShortcutF = '<C-P>'
 let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
 nmap <silent> <C-T> :LeaderfTag<CR>
-nmap <silent> <C-R> :LeaderfBufTag<CR>
+nmap <silent> <C-Y> :LeaderfBufTag<CR>
