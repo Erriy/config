@@ -30,7 +30,8 @@ font pango:Monaco 8
 floating_modifier $mod
 
 #exec --no-startup-id feh --bg-scale ~/.config/arch_Rem.jpg
-exec --no-startup-id feh --bg-center ~/.config/blackarch_logo.png
+# exec --no-startup-id feh --bg-center ~/.config/blackarch_logo.png
+exec --no-startup-id feh --bg-center ~/.config/blackarch_fog.jpg
 
 exec --no-startup-id synclient VertScrollDelta=-103
 exec --no-startup-id synclient HorizScrollDelta=-103
