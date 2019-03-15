@@ -221,11 +221,12 @@ bar {
     position          top
     mode              hide
     modifier          $mod
+    font pango:monospace 8, FontAwesome 8
 
     colors {
         background #000000
         statusline #ffffff
- 		# 工作区颜色         边框    背景     文字
+        # 工作区颜色         边框    背景     文字
         focused_workspace  #ffffff #ff0000 #ffffff
         active_workspace   #000088 #008800 #880000
         inactive_workspace #888888 #222222 #008800
