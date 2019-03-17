@@ -59,7 +59,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 bindsym $mod+F8 exec --no-startup-id thunar
-bindsym $mod+F9 exec --no-startup-id chromium
+bindsym $mod+F9 exec --no-startup-id google-chrome-stable
 bindsym $mod+Insert exec --no-startup-id code
 bindsym $mod+l exec --no-startup-id i3lock -i /etc/lightdm/blackarch_fog.png -e -f -c "#000000"
 
