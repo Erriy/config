@@ -207,7 +207,7 @@ bindsym $mod+b border toggle
 # 窗口颜色                边框    背景     文字     提示
 client.focused          #880000 #000000 #ff0000 #ff0000
 client.focused_inactive #000000 #000000 #008800 #3399FF
-client.unfocused        #000000 #000000 #009999 #3399FF
+client.unfocused        #444444 #000000 #009999 #3399FF
 client.urgent           #990000 #990000 #000000 #990000
 client.placeholder      #000000 #000000 #000000 #000000
 client.background       #000000
