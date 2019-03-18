@@ -35,6 +35,7 @@ exec --no-startup-id feh --bg-center /etc/lightdm/blackarch_fog.png
 
 exec --no-startup-id synclient VertScrollDelta=-103
 exec --no-startup-id synclient HorizScrollDelta=-103
+exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
