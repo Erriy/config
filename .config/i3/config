@@ -29,18 +29,18 @@ font pango:monospace 8, FontAwesome 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+
+# auto start ==============================================================================================
 #exec --no-startup-id feh --bg-scale ~/.config/arch_Rem.jpg
 # exec --no-startup-id feh --bg-center ~/.config/blackarch_logo.png
 exec --no-startup-id feh --bg-center /etc/lightdm/blackarch_fog.png
-
 exec --no-startup-id synclient VertScrollDelta=-103
 exec --no-startup-id synclient HorizScrollDelta=-103
 exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 exec --no-startup-id goldendict
 
-# start a terminal
+# hot key bind ============================================================================================
 bindsym $mod+Return exec i3-sensible-terminal
-
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
@@ -48,6 +48,9 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase s
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 bindsym Print exec --no-startup-id scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
 bindsym $mod+Print --release exec --no-startup-id scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
+bindsym $mod+Shift+l exec --no-startup-id synclient TouchpadOff=1 && syndaemon -i 0.5 -t -K -R -d
+bindsym $mod+Shift+u exec --no-startup-id synclient TouchpadOff=0 && syndaemon -i 0.5 -t -K -R -d
+
 
 # => 暂存窗口（额外的可隐藏浮动窗口，取消浮动还原成普通窗口）
 # 转换普通窗口为暂存窗口
@@ -85,10 +88,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
