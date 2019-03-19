@@ -48,9 +48,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase s
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 bindsym Print exec --no-startup-id scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
 bindsym $mod+Print --release exec --no-startup-id scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
-bindsym $mod+Shift+l exec --no-startup-id synclient TouchpadOff=1 && syndaemon -i 0.5 -t -K -R -d
-bindsym $mod+Shift+u exec --no-startup-id synclient TouchpadOff=0 && syndaemon -i 0.5 -t -K -R -d
-
+bindsym $mod+Shift+l exec --no-startup-id "(synclient TouchpadOff=$(synclient | sed '/TouchpadOff/{s/0/1/; t;s/2/1/; t;s/1/0/;}' | sed -rn 's/.*TouchpadOff.*=.*([0-9]+)/\1/p')) && killall syndaemon && syndaemon -i 0.5 -t -K -R -d"
 
 # => 暂存窗口（额外的可隐藏浮动窗口，取消浮动还原成普通窗口）
 # 转换普通窗口为暂存窗口
