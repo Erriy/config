@@ -18,5 +18,6 @@
 - google-chrome-stable
 - code
 - xss-lock
+- copyq
 
 

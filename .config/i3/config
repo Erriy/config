@@ -47,6 +47,11 @@ new_window normal
 new_float normal
 # 取消工作区边缘的边框
 hide_edge_borders both
+# 特例窗口样式
+for_window [class="copyq"] floating enable
+for_window [class="copyq"] border none
+for_window [class="Code"] border none
+for_window [class="Google-chrome"] border none
 
 # 自动启动 =================================================================================================
 # 设置壁纸
@@ -62,6 +67,8 @@ exec --no-startup-id goldendict
 exec --no-startup-id xcompmgr -c
 # 合盖自动锁定
 exec --no-startup-id "xss-lock -- i3lock -i /etc/lightdm/blackarch_fog.png -e -f -c \"#000000\""
+# 剪贴板管理器
+exec --no-startup-id copyq
 
 # 快捷键 ==================================================================================================
 # 启动终端
@@ -95,6 +102,8 @@ bindsym $mod+F9 exec --no-startup-id google-chrome-stable
 bindsym $mod+Insert exec --no-startup-id code
 # 系统锁定
 bindsym $mod+l exec --no-startup-id i3lock -i /etc/lightdm/blackarch_fog.png -e -f -c "#000000"
+# 剪贴板管理器
+bindsym Control+Mod1+v exec --no-startup-id copyq show
 
 # 切换窗口焦点
 bindsym $mod+Left focus left
