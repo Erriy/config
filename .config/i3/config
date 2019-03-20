@@ -60,6 +60,8 @@ exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 exec --no-startup-id goldendict
 # 消除sogou舒服法切换时的黑色边框
 exec --no-startup-id xcompmgr -c
+# 合盖自动锁定
+exec --no-startup-id "xss-lock -- i3lock -i /etc/lightdm/blackarch_fog.png -e -f -c \"#000000\""
 
 # 快捷键 ==================================================================================================
 # 启动终端
