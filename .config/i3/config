@@ -15,7 +15,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "0"
+set $ws10 "10"
 # 窗口颜色                边框    背景     文字     提示
 client.focused          #880000 #000000 #ff0000 #ff0000
 client.focused_inactive #000000 #000000 #008800 #3399FF
