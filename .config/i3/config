@@ -51,6 +51,7 @@ hide_edge_borders both
 for_window [class="copyq"] floating enable border none
 for_window [class="Code"] border none
 for_window [class="Google-chrome"] border none
+for_window [class="Firefox"] border none
 for_window [class="electronic-wechat"] border none floating enable
 
 # 自动启动 =================================================================================================
