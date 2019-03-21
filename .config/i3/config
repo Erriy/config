@@ -6,6 +6,7 @@ font pango:monospace 8, FontAwesome 8
 # floating窗口的移动热键，按下热键+鼠标左键即可拖动窗口
 floating_modifier $mod
 # workspace名称
+set $ws0 "0"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -130,6 +131,7 @@ bindsym $mod+Shift+space floating toggle
 # 在平铺窗口与浮动窗口之间切换焦点
 bindsym $mod+space focus mode_toggle
 # 切换workspace
+bindsym $mod+grave workspace $ws0
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -141,6 +143,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 # 移动当前窗口到其他的workspace
+bindsym $mod+Shift+grave move container to workspace $ws0
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
