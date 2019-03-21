@@ -48,10 +48,10 @@ new_float normal
 # 取消工作区边缘的边框
 hide_edge_borders both
 # 特例窗口样式
-for_window [class="copyq"] floating enable
-for_window [class="copyq"] border none
+for_window [class="copyq"] floating enable border none
 for_window [class="Code"] border none
 for_window [class="Google-chrome"] border none
+for_window [class="electronic-wechat"] border none floating enable
 
 # 自动启动 =================================================================================================
 # 设置壁纸

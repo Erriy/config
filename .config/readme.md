@@ -19,5 +19,6 @@
 - code
 - xss-lock
 - copyq
+- electronic-wechat
 
 
