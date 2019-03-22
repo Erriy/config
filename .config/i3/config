@@ -6,23 +6,25 @@ font pango:monospace 8, FontAwesome 8
 # floating窗口的移动热键，按下热键+鼠标左键即可拖动窗口
 floating_modifier $mod
 # workspace名称
-set $ws0 "0"
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-set $wsf1 "11"
-set $wsf2 "12"
-set $wsf3 "13"
-set $wsf4 "14"
-set $wsf5 "15"
-set $wsf6 "16"
+set $ws0 "0:~"
+set $ws1 "1:1"
+set $ws2 "2:2"
+set $ws3 "3:3"
+set $ws4 "4:4"
+set $ws5 "5:5"
+set $ws6 "6:6"
+set $ws7 "7:7"
+set $ws8 "8:8"
+set $ws9 "9:9"
+set $ws10 "10:0"
+set $wsesc "11:ESC"
+set $wsf1 "12:F1"
+set $wsf2 "13:F2"
+set $wsf3 "14:F3"
+set $wsf4 "15:F4"
+set $wsf5 "16:F5"
+set $wsf6 "17:F6"
+set $wsf7 "18:F7"
 
 # 窗口颜色                边框    背景     文字     提示
 client.focused          #880000 #000000 #ff0000 #ff0000
@@ -37,6 +39,7 @@ bar {
     mode              hide
     modifier          $mod
     font pango:monospace 8, FontAwesome 8
+    strip_workspace_numbers yes
 
     colors {
         background #000000
@@ -149,12 +152,14 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+bindsym $mod+Escape workspace $wsesc
 bindsym $mod+F1 workspace $wsf1
 bindsym $mod+F2 workspace $wsf2
 bindsym $mod+F3 workspace $wsf3
 bindsym $mod+F4 workspace $wsf4
 bindsym $mod+F5 workspace $wsf5
 bindsym $mod+F6 workspace $wsf6
+bindsym $mod+F7 workspace $wsf7
 
 # 移动当前窗口到其他的workspace
 bindsym $mod+Shift+grave move container to workspace $ws0
@@ -168,12 +173,14 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+Escape move container to workspace $wsesc
 bindsym $mod+Shift+F1 move container to workspace $wsf1
 bindsym $mod+Shift+F2 move container to workspace $wsf2
 bindsym $mod+Shift+F3 move container to workspace $wsf3
 bindsym $mod+Shift+F4 move container to workspace $wsf4
 bindsym $mod+Shift+F5 move container to workspace $wsf5
 bindsym $mod+Shift+F6 move container to workspace $wsf6
+bindsym $mod+Shift+F7 move container to workspace $wsf7
 
 # 重新加载配置文件
 bindsym $mod+Shift+c reload
