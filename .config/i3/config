@@ -65,6 +65,7 @@ for_window [class="Google-chrome"] border none
 for_window [class="Firefox"] border none
 for_window [class="electronic-wechat"] border none floating enable
 for_window [class="TelegramDesktop"] border none
+for_window [class="Wireshark"] border none
 
 # 自动启动 =================================================================================================
 # 设置壁纸
