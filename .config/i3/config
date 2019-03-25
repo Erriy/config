@@ -182,6 +182,27 @@ bindsym Mod4+Shift+F5 move container to workspace $wsf5
 bindsym Mod4+Shift+F6 move container to workspace $wsf6
 bindsym Mod4+Shift+F7 move container to workspace $wsf7
 
+# 重命名workspace(移动workspace)
+bindsym Mod4+Mod1+Shift+grave rename workspace $ws0
+bindsym Mod4+Mod1+Shift+1 rename workspace to $ws1
+bindsym Mod4+Mod1+Shift+2 rename workspace to $ws2
+bindsym Mod4+Mod1+Shift+3 rename workspace to $ws3
+bindsym Mod4+Mod1+Shift+4 rename workspace to $ws4
+bindsym Mod4+Mod1+Shift+5 rename workspace to $ws5
+bindsym Mod4+Mod1+Shift+6 rename workspace to $ws6
+bindsym Mod4+Mod1+Shift+7 rename workspace to $ws7
+bindsym Mod4+Mod1+Shift+8 rename workspace to $ws8
+bindsym Mod4+Mod1+Shift+9 rename workspace to $ws9
+bindsym Mod4+Mod1+Shift+0 rename workspace to $ws10
+bindsym Mod4+Mod1+Shift+Escape rename workspace to $wsesc
+bindsym Mod4+Mod1+Shift+F1 rename workspace to $wsf1
+bindsym Mod4+Mod1+Shift+F2 rename workspace to $wsf2
+bindsym Mod4+Mod1+Shift+F3 rename workspace to $wsf3
+bindsym Mod4+Mod1+Shift+F4 rename workspace to $wsf4
+bindsym Mod4+Mod1+Shift+F5 rename workspace to $wsf5
+bindsym Mod4+Mod1+Shift+F6 rename workspace to $wsf6
+bindsym Mod4+Mod1+Shift+F7 rename workspace to $wsf7
+
 # 重新加载配置文件
 bindsym Mod4+Shift+c reload
 # 重新启动i3wm
