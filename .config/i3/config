@@ -119,6 +119,8 @@ bindsym Mod4+c exec --no-startup-id google-chrome-stable
 bindsym Mod4+f exec --no-startup-id firefox
 # vscode
 bindsym Mod4+v exec --no-startup-id code
+# goldendict
+bindsym Mod4+g exec --no-startup-id goldendict
 # 系统锁定
 bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
 # 剪贴板管理器
