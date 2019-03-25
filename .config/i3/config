@@ -96,7 +96,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease
 bindsym Print exec --no-startup-id scrot -e 'mv $f /tmp/ && copyq write image/gif - < /tmp/$f'
 bindsym Mod4+Print --release exec --no-startup-id scrot -s -e 'mv $f /tmp/ && copyq write image/gif - < /tmp/$f'
 # 锁定、解锁触摸板
-bindsym Mod4+Shift+l exec --no-startup-id "(synclient TouchpadOff=$(synclient | sed '/TouchpadOff/{s/0/1/; t;s/2/1/; t;s/1/0/;}' | sed -rn 's/.*TouchpadOff.*=.*([0-9]+)/\1/p')) && killall syndaemon && syndaemon -i 0.5 -t -K -R -d"
+bindsym Mod4+Mod1+l exec --no-startup-id "(synclient TouchpadOff=$(synclient | sed '/TouchpadOff/{s/0/1/; t;s/2/1/; t;s/1/0/;}' | sed -rn 's/.*TouchpadOff.*=.*([0-9]+)/\1/p')) && killall syndaemon && syndaemon -i 0.5 -t -K -R -d"
 # => 暂存窗口（额外的可隐藏浮动窗口，取消浮动还原成普通窗口）
 # 转换普通窗口为暂存窗口
 bindsym Mod4+Shift+minus move scratchpad
@@ -107,11 +107,13 @@ bindsym Mod4+Shift+q kill
 # rofi启动器，启动软件
 bindsym Mod4+d exec --no-startup-id rofi -show run
 # thunar文件管理器
-bindsym Mod4+F8 exec --no-startup-id thunar
+bindsym Mod4+e exec --no-startup-id thunar
 # chrome浏览器
-bindsym Mod4+F9 exec --no-startup-id google-chrome-stable
+bindsym Mod4+c exec --no-startup-id google-chrome-stable
+# firefox
+bindsym Mod4+f exec --no-startup-id firefox
 # vscode
-bindsym Mod4+Insert exec --no-startup-id code
+bindsym Mod4+v exec --no-startup-id code
 # 系统锁定
 bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
 # 剪贴板管理器
@@ -131,14 +133,14 @@ bindsym Mod4+Shift+Down move down
 bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
 # 下一个窗口的开启位置 
-bindsym Mod4+h split h
-bindsym Mod4+v split v
+bindsym Mod4+Mod1+h split h
+bindsym Mod4+Mod1+v split v
 # 当前窗口全屏
-bindsym Mod4+f fullscreen toggle
+bindsym Mod4+Mod1+f fullscreen toggle
 # 窗口显示模式切换
-bindsym Mod4+s layout stacking
-bindsym Mod4+w layout tabbed
-bindsym Mod4+e layout toggle split
+bindsym Mod4+Mod1+s layout stacking
+bindsym Mod4+Mod1+w layout tabbed
+bindsym Mod4+Mod1+e layout toggle split
 # 当前窗口的平铺/浮动切换
 bindsym Mod4+Shift+space floating toggle
 # 在平铺窗口与浮动窗口之间切换焦点
@@ -214,7 +216,7 @@ bindsym Mod4+Shift+r restart
 bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # 窗口大小调整
-bindsym Mod4+r mode "resize"
+bindsym Mod4+Mod1+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -240,4 +242,4 @@ mode "resize" {
 }
 
 # 在三种边框类型中切换
-bindsym Mod4+b border toggle
+bindsym Mod4+Mod1+b border toggle
