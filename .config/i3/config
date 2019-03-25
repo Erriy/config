@@ -117,6 +117,9 @@ bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_19
 # 剪贴板管理器
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 
+# 切换工作区
+bindsym Mod4+Mod1+Left workspace prev
+bindsym Mod4+Mod1+Right workspace next
 # 切换窗口焦点
 bindsym Mod4+Left focus left
 bindsym Mod4+Down focus down
