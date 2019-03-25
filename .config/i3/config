@@ -1,10 +1,8 @@
 # 基础配置 =================================================================================================
-# windows键为mod键 
-set $mod Mod4
 # 字体
 font pango:monospace 8, FontAwesome 8
 # floating窗口的移动热键，按下热键+鼠标左键即可拖动窗口
-floating_modifier $mod
+floating_modifier Mod4
 # workspace名称
 set $ws0 "0:~"
 set $ws1 "1:1"
@@ -37,7 +35,7 @@ bar {
     status_command    conky -c ~/.config/conkyrc
     position          top
     mode              hide
-    modifier          $mod
+    modifier          Mod4
     font pango:monospace 8, FontAwesome 8
     strip_workspace_numbers yes
 
@@ -86,7 +84,7 @@ exec --no-startup-id copyq
 
 # 快捷键 ==================================================================================================
 # 启动终端
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym Mod4+Return exec i3-sensible-terminal
 # 音量调整
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
@@ -96,103 +94,103 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase s
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 # 截图
 bindsym Print exec --no-startup-id scrot -e 'mv $f /tmp/ && copyq write image/gif - < /tmp/$f'
-bindsym $mod+Print --release exec --no-startup-id scrot -s -e 'mv $f /tmp/ && copyq write image/gif - < /tmp/$f'
+bindsym Mod4+Print --release exec --no-startup-id scrot -s -e 'mv $f /tmp/ && copyq write image/gif - < /tmp/$f'
 # 锁定、解锁触摸板
-bindsym $mod+Shift+l exec --no-startup-id "(synclient TouchpadOff=$(synclient | sed '/TouchpadOff/{s/0/1/; t;s/2/1/; t;s/1/0/;}' | sed -rn 's/.*TouchpadOff.*=.*([0-9]+)/\1/p')) && killall syndaemon && syndaemon -i 0.5 -t -K -R -d"
+bindsym Mod4+Shift+l exec --no-startup-id "(synclient TouchpadOff=$(synclient | sed '/TouchpadOff/{s/0/1/; t;s/2/1/; t;s/1/0/;}' | sed -rn 's/.*TouchpadOff.*=.*([0-9]+)/\1/p')) && killall syndaemon && syndaemon -i 0.5 -t -K -R -d"
 # => 暂存窗口（额外的可隐藏浮动窗口，取消浮动还原成普通窗口）
 # 转换普通窗口为暂存窗口
-bindsym $mod+Shift+minus move scratchpad
+bindsym Mod4+Shift+minus move scratchpad
 # 呼出/隐藏暂存窗口
-bindsym $mod+minus scratchpad show
+bindsym Mod4+minus scratchpad show
 # 关闭当前窗口
-bindsym $mod+Shift+q kill
+bindsym Mod4+Shift+q kill
 # rofi启动器，启动软件
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym Mod4+d exec --no-startup-id rofi -show run
 # thunar文件管理器
-bindsym $mod+F8 exec --no-startup-id thunar
+bindsym Mod4+F8 exec --no-startup-id thunar
 # chrome浏览器
-bindsym $mod+F9 exec --no-startup-id google-chrome-stable
+bindsym Mod4+F9 exec --no-startup-id google-chrome-stable
 # vscode
-bindsym $mod+Insert exec --no-startup-id code
+bindsym Mod4+Insert exec --no-startup-id code
 # 系统锁定
-bindsym $mod+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
+bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
 # 剪贴板管理器
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 
 # 切换窗口焦点
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym Mod4+Left focus left
+bindsym Mod4+Down focus down
+bindsym Mod4+Up focus up
+bindsym Mod4+Right focus right
 # 移动窗口
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+Right move right
 # 下一个窗口的开启位置 
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym Mod4+h split h
+bindsym Mod4+v split v
 # 当前窗口全屏
-bindsym $mod+f fullscreen toggle
+bindsym Mod4+f fullscreen toggle
 # 窗口显示模式切换
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym Mod4+s layout stacking
+bindsym Mod4+w layout tabbed
+bindsym Mod4+e layout toggle split
 # 当前窗口的平铺/浮动切换
-bindsym $mod+Shift+space floating toggle
+bindsym Mod4+Shift+space floating toggle
 # 在平铺窗口与浮动窗口之间切换焦点
-bindsym $mod+space focus mode_toggle
+bindsym Mod4+space focus mode_toggle
 # 切换workspace
-bindsym $mod+grave workspace $ws0
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
-bindsym $mod+Escape workspace $wsesc
-bindsym $mod+F1 workspace $wsf1
-bindsym $mod+F2 workspace $wsf2
-bindsym $mod+F3 workspace $wsf3
-bindsym $mod+F4 workspace $wsf4
-bindsym $mod+F5 workspace $wsf5
-bindsym $mod+F6 workspace $wsf6
-bindsym $mod+F7 workspace $wsf7
+bindsym Mod4+grave workspace $ws0
+bindsym Mod4+1 workspace $ws1
+bindsym Mod4+2 workspace $ws2
+bindsym Mod4+3 workspace $ws3
+bindsym Mod4+4 workspace $ws4
+bindsym Mod4+5 workspace $ws5
+bindsym Mod4+6 workspace $ws6
+bindsym Mod4+7 workspace $ws7
+bindsym Mod4+8 workspace $ws8
+bindsym Mod4+9 workspace $ws9
+bindsym Mod4+0 workspace $ws10
+bindsym Mod4+Escape workspace $wsesc
+bindsym Mod4+F1 workspace $wsf1
+bindsym Mod4+F2 workspace $wsf2
+bindsym Mod4+F3 workspace $wsf3
+bindsym Mod4+F4 workspace $wsf4
+bindsym Mod4+F5 workspace $wsf5
+bindsym Mod4+F6 workspace $wsf6
+bindsym Mod4+F7 workspace $wsf7
 
 # 移动当前窗口到其他的workspace
-bindsym $mod+Shift+grave move container to workspace $ws0
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
-bindsym $mod+Shift+Escape move container to workspace $wsesc
-bindsym $mod+Shift+F1 move container to workspace $wsf1
-bindsym $mod+Shift+F2 move container to workspace $wsf2
-bindsym $mod+Shift+F3 move container to workspace $wsf3
-bindsym $mod+Shift+F4 move container to workspace $wsf4
-bindsym $mod+Shift+F5 move container to workspace $wsf5
-bindsym $mod+Shift+F6 move container to workspace $wsf6
-bindsym $mod+Shift+F7 move container to workspace $wsf7
+bindsym Mod4+Shift+grave move container to workspace $ws0
+bindsym Mod4+Shift+1 move container to workspace $ws1
+bindsym Mod4+Shift+2 move container to workspace $ws2
+bindsym Mod4+Shift+3 move container to workspace $ws3
+bindsym Mod4+Shift+4 move container to workspace $ws4
+bindsym Mod4+Shift+5 move container to workspace $ws5
+bindsym Mod4+Shift+6 move container to workspace $ws6
+bindsym Mod4+Shift+7 move container to workspace $ws7
+bindsym Mod4+Shift+8 move container to workspace $ws8
+bindsym Mod4+Shift+9 move container to workspace $ws9
+bindsym Mod4+Shift+0 move container to workspace $ws10
+bindsym Mod4+Shift+Escape move container to workspace $wsesc
+bindsym Mod4+Shift+F1 move container to workspace $wsf1
+bindsym Mod4+Shift+F2 move container to workspace $wsf2
+bindsym Mod4+Shift+F3 move container to workspace $wsf3
+bindsym Mod4+Shift+F4 move container to workspace $wsf4
+bindsym Mod4+Shift+F5 move container to workspace $wsf5
+bindsym Mod4+Shift+F6 move container to workspace $wsf6
+bindsym Mod4+Shift+F7 move container to workspace $wsf7
 
 # 重新加载配置文件
-bindsym $mod+Shift+c reload
+bindsym Mod4+Shift+c reload
 # 重新启动i3wm
-bindsym $mod+Shift+r restart
+bindsym Mod4+Shift+r restart
 # 退出i3wm
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # 窗口大小调整
-bindsym $mod+r mode "resize"
+bindsym Mod4+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -211,11 +209,11 @@ mode "resize" {
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
+        # back to normal: Enter or Escape or Mod4+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+        bindsym Mod4+r mode "default"
 }
 
 # 在三种边框类型中切换
-bindsym $mod+b border toggle
+bindsym Mod4+b border toggle
