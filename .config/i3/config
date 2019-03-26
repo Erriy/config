@@ -126,6 +126,10 @@ bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_19
 # 剪贴板管理器
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 
+# 执行i3wm命令
+bindsym Mod4+Mod1+space exec --no-startup-id i3-input -f "pango:monospace 10" -P "command : "
+# 工作区重命名,最长30
+bindsym Mod4+Mod1+n exec --no-startup-id i3-input -f "pango:monospace 10" -P "workspace name (1-30chars): " -F "rename workspace to %s" -l 30
 # 切换工作区
 bindsym Mod4+Mod1+Left workspace prev
 bindsym Mod4+Mod1+Right workspace next
