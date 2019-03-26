@@ -111,20 +111,29 @@ bindsym Mod4+minus scratchpad show
 bindsym Mod4+Shift+q kill
 # rofi启动器，启动软件
 bindsym Mod4+r exec --no-startup-id rofi -show run
-# thunar文件管理器
-bindsym Mod4+e exec --no-startup-id thunar
-# chrome浏览器
-bindsym Mod4+c exec --no-startup-id google-chrome-stable
-# firefox
-bindsym Mod4+f exec --no-startup-id firefox
-# vscode
-bindsym Mod4+v exec --no-startup-id code
-# goldendict
-bindsym Mod4+g exec --no-startup-id goldendict
 # 系统锁定
 bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
 # 剪贴板管理器
 bindsym Control+Mod1+v exec --no-startup-id copyq show
+
+# 快速启动app
+bindsym --release Mod4+o mode "open apps"
+mode "open apps" {
+    # vscode
+    bindsym v exec --no-startup-id code --new-window
+    # thunar文件管理器
+    bindsym e exec --no-startup-id thunar
+    # chrome
+    bindsym c exec --no-startup-id google-chrome-stable
+    # goldendict
+    bindsym g exec --no-startup-id goldendict
+    # firefox
+    bindsym f exec --no-startup-id firefox
+
+    # 恢复默认模式
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
 
 # 执行i3wm命令
 bindsym Mod4+Mod1+space exec --no-startup-id i3-input -f "pango:monospace 10" -P "command : "
