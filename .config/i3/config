@@ -3,6 +3,10 @@
 font pango:monospace 8, FontAwesome 8
 # floating窗口的移动热键，按下热键+鼠标左键即可拖动窗口
 floating_modifier Mod4
+# 有弹窗时离开全屏模式
+popup_during_fullscreen leave_fullscreen
+# 工作区快速返回
+workspace_auto_back_and_forth yes
 # workspace名称
 set $ws0 "0:~"
 set $ws1 "1:1"
