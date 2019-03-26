@@ -222,7 +222,7 @@ bindsym Mod4+Shift+F11 move container to workspace $wsf11
 bindsym Mod4+Shift+F12 move container to workspace $wsf12
 
 # 重命名workspace(移动workspace)
-bindsym Mod4+Mod1+grave rename workspace $ws0
+bindsym Mod4+Mod1+grave rename workspace to $ws0
 bindsym Mod4+Mod1+1 rename workspace to $ws1
 bindsym Mod4+Mod1+2 rename workspace to $ws2
 bindsym Mod4+Mod1+3 rename workspace to $ws3
