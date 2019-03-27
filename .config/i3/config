@@ -127,8 +127,10 @@ bindsym --release Mod4+o mode "open apps"
 mode "open apps" {
     # vscode
     bindsym v exec --no-startup-id code --new-window; mode "default"
+    # nautilus文件管理器
+    bindsym e exec --no-startup-id nautilus; mode "default" 
     # thunar文件管理器
-    bindsym e exec --no-startup-id thunar; mode "default"
+    # bindsym e exec --no-startup-id thunar; mode "default"
     # chrome
     bindsym c exec --no-startup-id google-chrome-stable; mode "default"
     # goldendict
