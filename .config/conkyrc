@@ -33,15 +33,15 @@ conky.config = {
 
 conky.text = [[
 ${if_up wlp2s0}\
- ${upspeed wlp2s0}/s  ${downspeed wlp2s0}/s  \
- ${wireless_essid wlp2s0}_${wireless_bitrate wlp2s0}(${addr wlp2s0})  \
+ ${upspeed wlp2s0}/s  ${downspeed wlp2s0}/s  \
+ ${wireless_essid wlp2s0}_${wireless_bitrate wlp2s0}(${addr wlp2s0})  \
 ${endif}\
- ${cpu}%  \
- ${mem}/${memmax}  \
- ${fs_used /}/${fs_size /}  \
- ${battery_percent}%(${battery_time})  \
- ${uptime_short}  \
- ${user_number}  \
-${execi 1 amixer | grep -A10 'Master' | sed -rn 's/.*\[([0-9]+%)\].*\[(on|off)\]/\2 \1/p' | sed -n '1p' | sed 's/off.*/ /' | sed -r 's/on( [01234]?[0-9]%)/\1/' | sed -r 's/(on|) 0%/ 0%/' | sed -r 's/on//'}  \
- ${time %Y/%m/%d_%u_%H:%M:%S}
+ ${cpu}%  \
+ ${mem}/${memmax}  \
+ ${fs_used /}/${fs_size /}  \
+ ${battery_percent}%(${battery_time})  \
+ ${uptime_short}  \
+ ${user_number}  \
+${execi 1 amixer | grep -A10 'Master' | sed -rn 's/.*\[([0-9]+%)\].*\[(on|off)\]/\2 \1/p' | sed -n '1p' | sed 's/off.*/ /' | sed -r 's/on( [01234]?[0-9]%)/\1/' | sed -r 's/(on|) 0%/ 0%/' | sed -r 's/on//'}  \
+ ${time %Y/%m/%d_%u_%H:%M:%S} 
 ]]
