@@ -137,6 +137,8 @@ mode "open apps" {
     bindsym f exec --no-startup-id firefox
     # telegram
     bindsym t exec --no-startup-id telegram-desktop
+    # 微信
+    bindsym w exec --no-startup-id electronic-wechat
 
     # 恢复默认模式
     bindsym Escape mode "default"
