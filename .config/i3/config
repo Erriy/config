@@ -126,19 +126,19 @@ bindsym Control+Mod1+v exec --no-startup-id copyq show
 bindsym --release Mod4+o mode "open apps"
 mode "open apps" {
     # vscode
-    bindsym v exec --no-startup-id code --new-window
+    bindsym v exec --no-startup-id code --new-window; mode "default"
     # thunar文件管理器
-    bindsym e exec --no-startup-id thunar
+    bindsym e exec --no-startup-id thunar; mode "default"
     # chrome
-    bindsym c exec --no-startup-id google-chrome-stable
+    bindsym c exec --no-startup-id google-chrome-stable; mode "default"
     # goldendict
-    bindsym g exec --no-startup-id goldendict
+    bindsym g exec --no-startup-id goldendict; mode "default"
     # firefox
-    bindsym f exec --no-startup-id firefox
+    bindsym f exec --no-startup-id firefox; mode "default"
     # telegram
-    bindsym t exec --no-startup-id telegram-desktop
+    bindsym t exec --no-startup-id telegram-desktop; mode "default"
     # 微信
-    bindsym w exec --no-startup-id electronic-wechat
+    bindsym w exec --no-startup-id electronic-wechat; mode "default"
 
     # 恢复默认模式
     bindsym Escape mode "default"
