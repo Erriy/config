@@ -142,7 +142,9 @@ mode "open apps" {
     # 微信
     bindsym w exec --no-startup-id electronic-wechat; mode "default"
     # typora
-    bindsym m exec --no-startup-id typora
+    bindsym m exec --no-startup-id typora; mode "default"
+    # burpsuite
+    bindsym b exec --no-startup-id burpsuite; mode "default"
 
     # 恢复默认模式
     bindsym Escape mode "default"
