@@ -7,6 +7,8 @@ floating_modifier Mod4
 popup_during_fullscreen leave_fullscreen
 # 工作区快速返回
 workspace_auto_back_and_forth yes
+# 默认layout
+workspace_layout tabbed
 # workspace名称
 set $ws0 "0:~"
 set $ws1 "1:1"
@@ -133,6 +135,8 @@ mode "open apps" {
     bindsym g exec --no-startup-id goldendict
     # firefox
     bindsym f exec --no-startup-id firefox
+    # telegram
+    bindsym t exec --no-startup-id telegram-desktop
 
     # 恢复默认模式
     bindsym Escape mode "default"
