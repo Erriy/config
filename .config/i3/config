@@ -141,6 +141,8 @@ mode "open apps" {
     bindsym t exec --no-startup-id telegram-desktop; mode "default"
     # 微信
     bindsym w exec --no-startup-id electronic-wechat; mode "default"
+    # typora
+    bindsym m exec --no-startup-id typora
 
     # 恢复默认模式
     bindsym Escape mode "default"
