@@ -123,8 +123,9 @@ bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_19
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 
 # 快速启动app
-bindsym --release Mod4+o mode "open apps"
-mode "open apps" {
+set $mode_open_apps "open: (v)scode, (e)xplore, (c)hrome, (g)dict, (f)irefox, (t)elegram, (w)echat, (m)arkdown, (b)urpsuite"
+bindsym --release Mod4+o mode $mode_open_apps
+mode $mode_open_apps {
     # vscode
     bindsym v exec --no-startup-id code --new-window; mode "default"
     # nautilus文件管理器
