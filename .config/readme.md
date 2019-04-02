@@ -21,5 +21,6 @@
 - copyq
 - electronic-wechat
 - networkmanager、network-manager-applet
+- sakura
 
 

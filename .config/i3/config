@@ -98,7 +98,7 @@ exec --no-startup-id nm-applet
 
 # 快捷键 ==================================================================================================
 # 启动终端
-bindsym Mod4+Return exec i3-sensible-terminal
+bindsym Mod4+Return exec sakura
 # 音量调整
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
