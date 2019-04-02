@@ -20,5 +20,6 @@
 - xss-lock
 - copyq
 - electronic-wechat
+- networkmanager、network-manager-applet
 
 

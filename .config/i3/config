@@ -76,6 +76,7 @@ for_window [class="electronic-wechat"] border none floating enable
 for_window [class="TelegramDesktop"] border none floating enable
 for_window [class="Wireshark"] border none
 for_window [class="Vmware"] border none
+for_window [class="Nm-connection-editor"] border none floating enable
 # 自动启动 =================================================================================================
 # 设置壁纸
 exec --no-startup-id feh --bg-center /etc/lightdm/blackarch_fog.png
@@ -92,6 +93,8 @@ exec --no-startup-id xcompmgr -c
 exec --no-startup-id "xss-lock -- i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c \"#000000\""
 # 剪贴板管理器
 exec --no-startup-id copyq
+# 启动网络管理器
+exec --no-startup-id nm-applet
 
 # 快捷键 ==================================================================================================
 # 启动终端
@@ -123,7 +126,7 @@ bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_19
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 
 # 快速启动app
-set $mode_open_apps "open: (v)scode, (e)xplore, (c)hrome, (d)ict, (f)irefox, (t)elegram, (w)echat, (m)arkdown, (b)urpsuite, (V)mware, (R)emmina"
+set $mode_open_apps "open: (b)urpsuite, (c)hrome, (d)ict, (e)xplore, (f)irefox, (m)arkdown, (t)elegram, (v)scode, (w)echat, (R)emmina, (V)mware"
 bindsym --release Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
