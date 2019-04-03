@@ -7,6 +7,8 @@ floating_modifier Mod4
 popup_during_fullscreen leave_fullscreen
 # 工作区快速返回
 workspace_auto_back_and_forth yes
+# 显示mark标签
+show_marks yes
 # 默认layout
 workspace_layout tabbed
 # workspace名称
@@ -161,6 +163,65 @@ mode $mode_open_apps {
     bindsym Return mode "default"
     bindsym Mod4+o mode "default"
 }
+
+
+# mark 
+set $mode_mark "mark: (f)ocus, (m)ark, (s)wap, (u)nmark, [Alt+Num:mark, Shift+Num:unmark, Num:focus]"
+bindsym Mod4+m mode $mode_mark
+mode $mode_mark {
+
+    bindsym m exec --no-startup-id i3-input -f "pango:monospace 10" -P "mark : " -F "mark %s"; mode "default"
+    bindsym f exec --no-startup-id i3-input -f "pango:monospace 10" -P "focus : " -F "[con_mark=%s] focus"; mode "default"
+    bindsym u exec --no-startup-id i3-input -f "pango:monospace 10" -P "unmark : " -F "unmark %s"; mode "default"
+    bindsym s exec --no-startup-id i3-input -f "pango:monospace 10" -P "swap container mark : " -F "swap container with mark %sa"; mode "default"
+
+    # mark 1
+    bindsym Mod1+1 mark 1; mode "default"
+    bindsym Shift+1 unmark 1; mode "default"
+    bindsym 1 [con_mark=1] focus; mode "default"
+    # mark 2
+    bindsym Mod1+2 mark 2; mode "default"
+    bindsym Shift+2 unmark 2; mode "default"
+    bindsym 2 [con_mark=2] focus; mode "default"
+    # mark 3
+    bindsym Mod1+3 mark 3; mode "default"
+    bindsym Shift+3 unmark 3; mode "default"
+    bindsym 3 [con_mark=3] focus; mode "default"
+    # mark 4
+    bindsym Mod1+4 mark 4; mode "default"
+    bindsym Shift+4 unmark 4; mode "default"
+    bindsym 4 [con_mark=4] focus; mode "default"
+    # mark 5
+    bindsym Mod1+5 mark 5; mode "default"
+    bindsym Shift+5 unmark 5; mode "default"
+    bindsym 5 [con_mark=5] focus; mode "default"
+    # mark 6
+    bindsym Mod1+6 mark 6; mode "default"
+    bindsym Shift+6 unmark 6; mode "default"
+    bindsym 6 [con_mark=6] focus; mode "default"
+    # mark 7
+    bindsym Mod1+7 mark 7; mode "default"
+    bindsym Shift+7 unmark 7; mode "default"
+    bindsym 7 [con_mark=7] focus; mode "default"
+    # mark 8
+    bindsym Mod1+8 mark 8; mode "default"
+    bindsym Shift+8 unmark 8; mode "default"
+    bindsym 8 [con_mark=8] focus; mode "default"
+    # mark 9
+    bindsym Mod1+9 mark 9; mode "default"
+    bindsym Shift+9 unmark 9; mode "default"
+    bindsym 9 [con_mark=9] focus; mode "default"
+    # mark 0
+    bindsym Mod1+0 mark 0; mode "default"
+    bindsym Shift+0 unmark 0; mode "default"
+    bindsym 0 [con_mark=0] focus; mode "default"
+
+    # 恢复默认模式
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Mod4+o mode "default"
+}
+
 
 # 执行i3wm命令
 bindsym Mod4+Mod1+space exec --no-startup-id i3-input -f "pango:monospace 10" -P "command : "
