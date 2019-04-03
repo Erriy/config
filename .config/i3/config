@@ -173,7 +173,7 @@ mode $mode_mark {
     bindsym m exec --no-startup-id i3-input -f "pango:monospace 10" -P "mark : " -F "mark %s"; mode "default"
     bindsym f exec --no-startup-id i3-input -f "pango:monospace 10" -P "focus : " -F "[con_mark=%s] focus"; mode "default"
     bindsym u exec --no-startup-id i3-input -f "pango:monospace 10" -P "unmark : " -F "unmark %s"; mode "default"
-    bindsym s exec --no-startup-id i3-input -f "pango:monospace 10" -P "swap container mark : " -F "swap container with mark %sa"; mode "default"
+    bindsym s exec --no-startup-id i3-input -f "pango:monospace 10" -P "swap container mark : " -F "swap container with mark %s"; mode "default"
 
     # mark 1
     bindsym Mod1+1 mark 1; mode "default"
