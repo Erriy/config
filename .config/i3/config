@@ -166,6 +166,8 @@ bindsym Mod4+Mod1+n exec --no-startup-id i3-input -f "pango:monospace 10" -P "wo
 # 切换工作区
 bindsym Mod4+Mod1+Left workspace prev
 bindsym Mod4+Mod1+Right workspace next
+bindsym Mod4+Mod1+j workspace prev
+bindsym Mod4+Mod1+k workspace next
 # 切换窗口焦点
 bindsym Mod4+Left focus left
 bindsym Mod4+Down focus down
