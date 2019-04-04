@@ -36,6 +36,10 @@ ${if_up enp0s20u2}\
  ${upspeed enp0s20u2}/s(${totalup enp0s20u2})  ${downspeed enp0s20u2}/s(${totaldown enp0s20u2})  \
  ${addr enp0s20u2}  \
 ${endif}\
+${if_up enp0s20u1}\
+ ${upspeed enp0s20u1}/s(${totalup enp0s20u1})  ${downspeed enp0s20u1}/s(${totaldown enp0s20u1})  \
+ ${addr enp0s20u1}  \
+${endif}\
 ${if_up wlp2s0}\
  ${upspeed wlp2s0}/s(${totalup wlp2s0})  ${downspeed wlp2s0}/s(${totaldown wlp2s0})  \
  ${wireless_essid wlp2s0}_${wireless_bitrate wlp2s0}(${addr wlp2s0})  \
