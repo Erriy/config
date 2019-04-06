@@ -1,5 +1,11 @@
 # 配置文件使用说明
 
+使用pyenv安装python3.7.2,进入.config/scripts安装依赖
+
+``` shell
+pip install -r requirements.txt
+```
+
 ## 软件依赖
 
 - i3wm、i3lock
