@@ -124,7 +124,7 @@ bindsym Mod4+minus scratchpad show
 # 关闭当前窗口
 bindsym Mod4+Shift+q kill
 # 关闭workspace
-bindsym Mod4+Mod1+q exec --no-startup-id [ "yes" = $(echo -e 'CANCEL' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -p '输入\"yes\"确认关闭当前workspace ' ) ] && ~/.pyenv/shims/python ~/.config/scripts/workspace.py kill
+bindsym Mod4+Mod1+q exec --no-startup-id [ "yes" = $(echo -e 'CANCEL' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -p '输入\"yes\"确认关闭当前workspace的所有窗口' ) ] && ~/.pyenv/shims/python ~/.config/scripts/workspace.py kill
 # rofi启动器，启动软件
 bindsym Mod4+r exec --no-startup-id rofi -cycle -terminal sakura -location 0 -font "monospace 12" -matching fuzzy -show run
 # 快速切换窗口
