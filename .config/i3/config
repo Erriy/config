@@ -253,9 +253,11 @@ bindsym Mod4+Right focus right
 bindsym Mod4+j focus left
 bindsym Mod4+k focus right
 # 移动窗口
+bindsym Mod4+Shift+j move left
 bindsym Mod4+Shift+Left move left
 bindsym Mod4+Shift+Down move down
 bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+k move right
 bindsym Mod4+Shift+Right move right
 # 下一个窗口的开启位置 
 bindsym Mod4+Shift+h split h
