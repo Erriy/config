@@ -124,7 +124,7 @@ bindsym Mod4+minus scratchpad show
 # 关闭当前窗口
 bindsym Mod4+Shift+q kill
 # 关闭workspace
-bindsym Mod4+Mod1+q exec --no-startup-id [ "YES" = $(echo -e 'NO\nYES' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p '关闭当前workspace的所有窗口?' ) ] && ~/.pyenv/shims/python ~/.config/scripts/workspace.py kill
+bindsym Mod4+Mod1+q exec --no-startup-id [ "YES" = $(echo -e 'NO\nYES' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p '是否确认关闭当前workspace的所有窗口 : ' ) ] && ~/.pyenv/shims/python ~/.config/scripts/workspace.py kill
 # rofi启动器，启动软件
 bindsym Mod4+r exec --no-startup-id rofi -cycle -terminal sakura -location 0 -font "monospace 12" -matching fuzzy -show run
 # 快速切换窗口
@@ -134,7 +134,7 @@ bindsym Mod4+l exec --no-startup-id i3lock -i ~/.config/blackarch_logo_center_19
 # 剪贴板管理器
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 # 关机选项
-bindsym Control+Mod1+Delete exec --no-startup-id "input=$(echo -e 'CANCEL\nREBOOT\nSHUTDOWN' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p '选择操作:[REBOOT-重启|SHUTDOWN-关闭]'); ([ 'REBOOT' = ${input} ] && systemctl reboot) || ([ 'SHUTDOWN' = ${input} ] && systemctl poweroff)"
+bindsym Control+Mod1+Delete exec --no-startup-id "input=$(echo -e 'CANCEL\nREBOOT\nSHUTDOWN' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p '选择操作 [REBOOT-重启|SHUTDOWN-关闭] : '); ([ 'REBOOT' = ${input} ] && systemctl reboot) || ([ 'SHUTDOWN' = ${input} ] && systemctl poweroff)"
 
 # 快速启动app
 set $mode_open_apps "open: (b)urpsuite, (c)hrome, (d)ict, (e)xplore, (f)irefox, (m)arkdown, (p)df, (s)sh, (t)elegram, (v)scode, (w)echat, (R)emmina, (V)mware, (W)ireshark"
@@ -183,10 +183,10 @@ set $mode_mark "mark: (f)ocus, (m)ark, (s)wap, (u)nmark, [Alt+Num:mark, Shift+Nu
 bindsym Mod4+m mode $mode_mark
 mode $mode_mark {
 
-    bindsym m exec --no-startup-id i3-input -f "pango:monospace 10" -P "mark : " -F "mark %s"; mode "default"
-    bindsym f exec --no-startup-id i3-input -f "pango:monospace 10" -P "focus : " -F "[con_mark=%s] focus"; mode "default"
-    bindsym u exec --no-startup-id i3-input -f "pango:monospace 10" -P "unmark : " -F "unmark %s"; mode "default"
-    bindsym s exec --no-startup-id i3-input -f "pango:monospace 10" -P "swap container mark : " -F "swap container with mark %s"; mode "default"
+    bindsym m mode "default";exec --no-startup-id "input=$(echo -e 'CANCEL' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'mark as :'); ([ 'CANCEL' = ${input} ] || i3-msg mark ${input})"
+    bindsym f mode "default";exec --no-startup-id "input=$(echo -e 'CANCEL' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'focus to :'); ([ 'CANCEL' = ${input} ] || i3-msg [con_mark=${input}] focus)"
+    bindsym u mode "default";exec --no-startup-id "input=$(echo -e 'CANCEL' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'unmark :'); ([ 'CANCEL' = ${input} ] || i3-msg unmark ${input})"
+    bindsym s mode "default";exec --no-startup-id "input=$(echo -e 'CANCEL' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'swap container mark :'); ([ 'CANCEL' = ${input} ] || i3-msg swap container with mark ${input})"
 
     # mark 1
     bindsym Mod1+1 mark 1; mode "default"
@@ -235,11 +235,8 @@ mode $mode_mark {
     bindsym Mod4+o mode "default"
 }
 
-
-# 执行i3wm命令
-bindsym Mod4+Mod1+space exec --no-startup-id i3-input -f "pango:monospace 10" -P "command : "
-# 工作区重命名,最长30
-bindsym Mod4+Mod1+n exec --no-startup-id i3-input -f "pango:monospace 10" -P "workspace name (1-30chars): " -F "rename workspace to %s" -l 30
+# 工作区重命名
+bindsym Mod4+Mod1+n exec --no-startup-id "input=$(echo -e 'CANCEL' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p '请输入新的工作区名称 (空格无效) : '); ([ 'CANCEL' = ${input} ] || i3-msg rename workspace to ${input})"
 # 切换工作区
 bindsym Mod4+Mod1+Left workspace prev
 bindsym Mod4+Mod1+Right workspace next
@@ -355,7 +352,7 @@ bindsym Mod4+Mod1+c reload
 # 重新启动i3wm
 bindsym Mod4+Mod1+r restart
 # 退出i3wm
-bindsym Mod4+Mod1+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+Mod1+e exec --no-startup-id "input=$(echo -e 'CANCEL\nYES' | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p '是否确认退出i3wm : '); ([ 'YES' = ${input} ] && i3-msg exit)"
 
 # 窗口大小调整
 bindsym Mod4+Shift+r mode "resize"
