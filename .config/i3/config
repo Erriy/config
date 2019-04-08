@@ -186,7 +186,7 @@ mode $mode_mark {
     bindsym m mode "default";exec --no-startup-id input=$(echo -e "CANCEL\n$(~/.pyenv/shims/python ~/.config/scripts/mark.py names)" | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'mark as :') && ([ 'CANCEL' = ${input} ] || i3-msg mark ${input})
     bindsym f mode "default";exec --no-startup-id input=$(echo -e "CANCEL\n$(~/.pyenv/shims/python ~/.config/scripts/mark.py names)" | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'focus to :') && ([ 'CANCEL' = ${input} ] || i3-msg [con_mark=${input}] focus)
     bindsym u mode "default";exec --no-startup-id input=$(echo -e "CANCEL\n$(~/.pyenv/shims/python ~/.config/scripts/mark.py names)" | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'unmark :') && ([ 'CANCEL' = ${input} ] || i3-msg unmark ${input})
-    bindsym s mode "default";exec --no-startup-id input=$(echo -e "CANCEL\n$(~/.pyenv/shims/python ~/.config/scripts/mark.py names)" | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'swap container mark :'); ([ 'CANCEL' = ${input} ] || i3-msg swap container with mark ${input})
+    bindsym s mode "default";exec --no-startup-id input=$(echo -e "CANCEL\n$(~/.pyenv/shims/python ~/.config/scripts/mark.py names)" | dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p 'swap container mark :') && ([ 'CANCEL' = ${input} ] || i3-msg swap container with mark ${input})
 
     # mark 1
     bindsym Mod1+1 mark 1; mode "default"
