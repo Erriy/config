@@ -13,7 +13,7 @@ def workspace():
 def names():
     wjs = i3ipc.Connection().get_workspaces()
     lname = [x["name"] for x in wjs]
-    print(",".join(lname))
+    print("\n".join(lname))
 
 
 @workspace.command()
