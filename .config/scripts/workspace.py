@@ -25,10 +25,11 @@ def name():
 
 
 @workspace.command()
-def kill():
+@click.option("-n", "--name", default=None, required=False, help="specify workspace name to kill")
+def kill(name):
     con = i3ipc.Connection()
     wjs = con.get_workspaces()
-    cws = list(filter(lambda x : x["focused"], wjs))[0]["name"]
+    cws = name if name else list(filter(lambda x : x["focused"], wjs))[0]["name"]
     con.command("[workspace=%s] kill"%cws)
 
 
