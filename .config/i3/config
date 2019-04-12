@@ -244,7 +244,7 @@ mode $mode_mark {
 }
 
 # 工作区重命名
-bindsym Mod4+Mod1+n exec --no-startup-id (input=$(echo -e "CANCEL" | $dmenu "请输入新的工作区名称 (空格无效) : ") && ([ "CANCEL" = ${input} ] || i3-msg rename workspace to ${input}))
+bindsym Mod4+Mod1+n exec --no-startup-id (input=$(echo -e "CANCEL\n$workspace_names" | $dmenu "请输入新的工作区名称($workspace_name) : ") && ([ "CANCEL" = ${input} ] || i3-msg rename workspace to ${input}))
 # 切换工作区
 bindsym Mod4+Mod1+Left workspace prev
 bindsym Mod4+Mod1+Right workspace next
