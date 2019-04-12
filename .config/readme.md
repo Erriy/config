@@ -29,4 +29,4 @@ pip install -r requirements.txt
 - networkmanager、network-manager-applet
 - sakura
 - pyenv
-
+- telegram-desktop
