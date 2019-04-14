@@ -30,3 +30,4 @@ pip install -r requirements.txt
 - sakura
 - pyenv
 - telegram-desktop
+- calibre
