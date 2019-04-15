@@ -96,7 +96,7 @@ exec --no-startup-id synclient HorizScrollDelta=-103
 # 键盘打字后0.5秒才可响应触摸板事件（防误触
 exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # goldendict词典
-exec --no-startup-id goldendict
+# exec --no-startup-id goldendict
 # 消除sogou输入法切换时的黑色边框
 exec --no-startup-id xcompmgr -c
 # 合盖自动锁定
