@@ -9,11 +9,12 @@ pip install -r requirements.txt
 ## 软件依赖
 
 - i3wm、i3lock
+- notify-osd
 - conky
 - feh
 - goldendict
 - synclient、syndaemon
-- xcompmgr
+- compton
 - fontawesome
 - amixer
 - xbacklight
@@ -30,3 +31,5 @@ pip install -r requirements.txt
 - sakura
 - pyenv
 - telegram-desktop
+- calibre
+- volumeicon

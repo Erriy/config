@@ -1,5 +1,6 @@
 # 宏 ======================================================================================================
-set $lock                   i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
+#set $lock                   i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
+set $lock                   dm-tool lock
 set $mark_names             $(~/.pyenv/shims/python ~/.config/scripts/mark.py names)
 set $workspace_names        $(~/.pyenv/shims/python ~/.config/scripts/workspace.py names)
 set $workspace_name         $(~/.pyenv/shims/python ~/.config/scripts/workspace.py name)
@@ -54,7 +55,7 @@ client.placeholder      #000000 #000000 #000000 #000000
 client.background       #000000
 bar {
     status_command    conky -c ~/.config/conkyrc
-    position          top
+    position          bottom
     mode              hide
     modifier          Mod4
     font pango:monospace 8, FontAwesome 8
@@ -96,26 +97,28 @@ exec --no-startup-id synclient HorizScrollDelta=-103
 # 键盘打字后0.5秒才可响应触摸板事件（防误触
 exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # goldendict词典
-exec --no-startup-id goldendict
+# exec --no-startup-id goldendict
 # 消除sogou输入法切换时的黑色边框
-exec --no-startup-id xcompmgr -c
+exec --no-startup-id compton
 # 合盖自动锁定
 exec --no-startup-id xss-lock -- $lock
 # 剪贴板管理器
 exec --no-startup-id copyq
 # 启动网络管理器
 exec --no-startup-id nm-applet
+# 启动音量管理器
+exec --no-startup-id volumeicon
 
 # 快捷键 ==================================================================================================
 # 启动终端
 bindsym Mod4+Return exec sakura
 # 音量调整
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
-bindsym Mod4+XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
-bindsym Mod4+XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
-bindsym Mod4+XF86AudioMute exec --no-startup-id amixer set Master toggle
+# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
+# bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
+# bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+# bindsym Mod4+XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
+# bindsym Mod4+XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
+# bindsym Mod4+XF86AudioMute exec --no-startup-id amixer set Master toggle
 # 亮度调整
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
@@ -142,42 +145,45 @@ bindsym Mod4+l exec --no-startup-id $lock
 # 剪贴板管理器
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 # 关机选项
-bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "CANCEL\nREBOOT\nSHUTDOWN" | $dmenu "选择操作 [REBOOT-重启|SHUTDOWN-关闭] : ") && ([ "REBOOT" = ${input} ] && systemctl reboot) || ([ "SHUTDOWN" = ${input} ] && systemctl poweroff))
-
+bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "CANCEL\nSWITCH\nREBOOT\nSHUTDOWN" | $dmenu "选择操作 [REBOOT-重启|SHUTDOWN-关闭] : ") && ([ "REBOOT" = ${input} ] && systemctl reboot) || ([ "SHUTDOWN" = ${input} ] && systemctl poweroff) || ([ "SWITCH" = ${input} ] && dm-tool switch-to-greeter))
+# 隐藏/显示i3bar
+bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
-set $mode_open_apps "open: (b)urpsuite, (c)hrome, (d)ict, (e)xplore, (f)irefox, (m)arkdown, (p)df, (s)sh, (t)elegram, (v)scode, (w)ireshark, (R)emmina, (V)mware, (W)echat"
+set $mode_open_apps "open: (b)urpsuite, (c)hrome, (d)ict, (e)xplore, (f)irefox, (m)arkdown, (p)df, (s)sh, (t)elegram, (v)scode, (w)ireshark, (C)alibre, (R)emmina, (V)mware, (W)echat"
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
-    bindsym v exec --no-startup-id code --new-window; mode "default"
+    bindsym v exec --no-startup-id code --new-window, mode "default"
     # nautilus文件管理器
-    bindsym e exec --no-startup-id nautilus; mode "default" 
+    bindsym e exec --no-startup-id nautilus, mode "default" 
     # thunar文件管理器
-    # bindsym e exec --no-startup-id thunar; mode "default"
+    # bindsym e exec --no-startup-id thunar, mode "default"
     # chrome
-    bindsym c exec --no-startup-id google-chrome-stable; mode "default"
+    bindsym c exec --no-startup-id google-chrome-stable, mode "default"
     # goldendict
-    bindsym d exec --no-startup-id goldendict; mode "default"
+    bindsym d exec --no-startup-id goldendict, mode "default"
     # firefox
-    bindsym f exec --no-startup-id firefox; mode "default"
+    bindsym f exec --no-startup-id firefox, mode "default"
     # telegram
-    bindsym t exec --no-startup-id telegram-desktop; mode "default"
+    bindsym t exec --no-startup-id telegram-desktop, mode "default"
     # wireshark
-    bindsym w exec --no-startup-id wireshark; mode "default"
+    bindsym w exec --no-startup-id wireshark, mode "default"
     # typora
-    bindsym m exec --no-startup-id typora; mode "default"
+    bindsym m exec --no-startup-id typora, mode "default"
     # burpsuite
-    bindsym b exec --no-startup-id burpsuite; mode "default"
+    bindsym b exec --no-startup-id burpsuite, mode "default"
     # ssh
-    bindsym s exec --no-startup-id $rofi -show ssh; mode "default"
+    bindsym s exec --no-startup-id $rofi -show ssh, mode "default"
     # evince pdf reader
-    bindsym p exec --no-startup-id evince;mode "default"
+    bindsym p exec --no-startup-id evince, mode "pdefault"
+    # Calibre
+    bindsym Shift+c exec --no-startup-id calibre, mode "default"
     # vmware
-    bindsym Shift+v exec --no-startup-id vmware; mode "default"
+    bindsym Shift+v exec --no-startup-id vmware, mode "default"
     # remmina
-    bindsym Shift+r exec --no-startup-id remmina; mode "default"
+    bindsym Shift+r exec --no-startup-id remmina, mode "default"
     # 微信
-    bindsym Shift+w exec --no-startup-id electronic-wechat; mode "default"
+    bindsym Shift+w exec --no-startup-id electronic-wechat, mode "default"
 
     # 恢复默认模式
     bindsym Escape mode "default"
@@ -191,51 +197,51 @@ set $mode_mark "mark: (f)ocus, (m)ark, (s)wap, (u)nmark, [Alt+Num:mark, Shift+Nu
 bindsym Mod4+m mode $mode_mark
 mode $mode_mark {
 
-    bindsym m mode "default";exec --no-startup-id (input=$(echo -e "CANCEL\n$mark_names" | $dmenu "mark as :") && ([ "CANCEL" = ${input} ] || i3-msg mark ${input}))
-    bindsym f mode "default";exec --no-startup-id (input=$(echo -e "CANCEL\n$mark_names" | $dmenu "focus to :") && ([ "CANCEL" = ${input} ] || i3-msg [con_mark=${input}] focus))
-    bindsym u mode "default";exec --no-startup-id (input=$(echo -e "CANCEL\n$mark_names" | $dmenu "unmark :") && ([ "CANCEL" = ${input} ] || i3-msg unmark ${input}))
-    bindsym s mode "default";exec --no-startup-id (input=$(echo -e "CANCEL\n$mark_names" | $dmenu "swap container mark :") && ([ "CANCEL" = ${input} ] || i3-msg swap container with mark ${input}))
+    bindsym m mode "default", exec --no-startup-id (input=$(echo -e "CANCEL\n$mark_names" | $dmenu "mark as :") && ([ "CANCEL" = ${input} ] || i3-msg mark ${input}))
+    bindsym f mode "default", exec --no-startup-id (input=$(echo -e "CANCEL\n$mark_names" | $dmenu "focus to :") && ([ "CANCEL" = ${input} ] || i3-msg [con_mark=${input}] focus))
+    bindsym u mode "default", exec --no-startup-id (input=$(echo -e "CANCEL\n$mark_names" | $dmenu "unmark :") && ([ "CANCEL" = ${input} ] || i3-msg unmark ${input}))
+    bindsym s mode "default", exec --no-startup-id (input=$(echo -e "CANCEL\n$mark_names" | $dmenu "swap container mark :") && ([ "CANCEL" = ${input} ] || i3-msg swap container with mark ${input}))
 
     # mark 1
-    bindsym Mod1+1 mark 1; mode "default"
-    bindsym Shift+1 unmark 1; mode "default"
-    bindsym 1 [con_mark=1] focus; mode "default"
+    bindsym Mod1+1 mark 1, mode "default"
+    bindsym Shift+1 unmark 1, mode "default"
+    bindsym 1 [con_mark=1] focus, mode "default"
     # mark 2
-    bindsym Mod1+2 mark 2; mode "default"
-    bindsym Shift+2 unmark 2; mode "default"
-    bindsym 2 [con_mark=2] focus; mode "default"
+    bindsym Mod1+2 mark 2, mode "default"
+    bindsym Shift+2 unmark 2, mode "default"
+    bindsym 2 [con_mark=2] focus, mode "default"
     # mark 3
-    bindsym Mod1+3 mark 3; mode "default"
-    bindsym Shift+3 unmark 3; mode "default"
-    bindsym 3 [con_mark=3] focus; mode "default"
+    bindsym Mod1+3 mark 3, mode "default"
+    bindsym Shift+3 unmark 3, mode "default"
+    bindsym 3 [con_mark=3] focus, mode "default"
     # mark 4
-    bindsym Mod1+4 mark 4; mode "default"
-    bindsym Shift+4 unmark 4; mode "default"
-    bindsym 4 [con_mark=4] focus; mode "default"
+    bindsym Mod1+4 mark 4, mode "default"
+    bindsym Shift+4 unmark 4, mode "default"
+    bindsym 4 [con_mark=4] focus, mode "default"
     # mark 5
-    bindsym Mod1+5 mark 5; mode "default"
-    bindsym Shift+5 unmark 5; mode "default"
-    bindsym 5 [con_mark=5] focus; mode "default"
+    bindsym Mod1+5 mark 5, mode "default"
+    bindsym Shift+5 unmark 5, mode "default"
+    bindsym 5 [con_mark=5] focus, mode "default"
     # mark 6
-    bindsym Mod1+6 mark 6; mode "default"
-    bindsym Shift+6 unmark 6; mode "default"
-    bindsym 6 [con_mark=6] focus; mode "default"
+    bindsym Mod1+6 mark 6, mode "default"
+    bindsym Shift+6 unmark 6, mode "default"
+    bindsym 6 [con_mark=6] focus, mode "default"
     # mark 7
-    bindsym Mod1+7 mark 7; mode "default"
-    bindsym Shift+7 unmark 7; mode "default"
-    bindsym 7 [con_mark=7] focus; mode "default"
+    bindsym Mod1+7 mark 7, mode "default"
+    bindsym Shift+7 unmark 7, mode "default"
+    bindsym 7 [con_mark=7] focus, mode "default"
     # mark 8
-    bindsym Mod1+8 mark 8; mode "default"
-    bindsym Shift+8 unmark 8; mode "default"
-    bindsym 8 [con_mark=8] focus; mode "default"
+    bindsym Mod1+8 mark 8, mode "default"
+    bindsym Shift+8 unmark 8, mode "default"
+    bindsym 8 [con_mark=8] focus, mode "default"
     # mark 9
-    bindsym Mod1+9 mark 9; mode "default"
-    bindsym Shift+9 unmark 9; mode "default"
-    bindsym 9 [con_mark=9] focus; mode "default"
+    bindsym Mod1+9 mark 9, mode "default"
+    bindsym Shift+9 unmark 9, mode "default"
+    bindsym 9 [con_mark=9] focus, mode "default"
     # mark 0
-    bindsym Mod1+0 mark 0; mode "default"
-    bindsym Shift+0 unmark 0; mode "default"
-    bindsym 0 [con_mark=0] focus; mode "default"
+    bindsym Mod1+0 mark 0, mode "default"
+    bindsym Shift+0 unmark 0, mode "default"
+    bindsym 0 [con_mark=0] focus, mode "default"
 
     # 恢复默认模式
     bindsym Escape mode "default"
