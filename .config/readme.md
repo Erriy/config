@@ -33,3 +33,4 @@ pip install -r requirements.txt
 - telegram-desktop
 - calibre
 - volumeicon
+- vimix-gtk-themes-git

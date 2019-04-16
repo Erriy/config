@@ -94,16 +94,22 @@ new_float none
 # 取消工作区边缘的边框
 hide_edge_borders both
 # 特例窗口样式
-for_window [class="copyq"] floating enable border none
+for_window [class="copyq"] floating enable sticky enable border none
 for_window [class="Code"] border none
 for_window [class="Google-chrome"] border none
 for_window [class="Firefox"] border none
-for_window [class="electronic-wechat"] border none floating enable
-for_window [class="TelegramDesktop"] border none floating enable
+for_window [class="electronic-wechat"] border none floating enable sticky enable
+for_window [class="TelegramDesktop"] floating enable sticky enable border none 
 for_window [class="Wireshark"] border none
 for_window [class="Vmware"] border none
-for_window [class="Nm-connection-editor"] border none floating enable
+for_window [class="Nm-connection-editor"] border none floating enable sticky enable
 for_window [class="Sakura"] border none
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="Lxappearance"] floating enable sticky enable border normal
+for_window [class="Org.gnome.Nautilus"] floating enable border none
+for_window [class="Fcitx-config-gtk3"] floating enable border none sticky enable
+# 自动跳转到紧急窗口
+for_window [urgent=latest] focus
 # 自动启动 =================================================================================================
 # 设置壁纸
 exec --no-startup-id feh --bg-center /etc/lightdm/blackarch_fog.png
