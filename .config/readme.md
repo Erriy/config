@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 ## 软件依赖
 
-- i3wm、i3lock
+- i3-gaps、i3lock
 - notify-osd
 - conky
 - feh
