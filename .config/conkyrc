@@ -28,7 +28,7 @@ conky.config = {
     -- cpu数据监测模式，一般选2
     cpu_avg_samples = 2,
     -- cpu占用应用的显示宽度
-    top_name_width=3
+    top_name_width=8
 
 }
 
