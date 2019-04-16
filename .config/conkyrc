@@ -50,6 +50,5 @@ ${endif}\
  ${battery_percent}%(${battery_time})  \
  ${uptime_short}  \
  ${user_number}  \
-${execi 1 amixer | grep -A10 'Master' | sed -rn 's/.*\[([0-9]+%)\].*\[(on|off)\]/\2 \1/p' | sed -n '1p' | sed 's/off.*/ /' | sed -r 's/on( [01234]?[0-9]%)/\1/' | sed -r 's/(on|) 0%/ 0%/' | sed -r 's/on//'}  \
  ${time %Y/%m/%d_%u_%H:%M:%S} 
 ]]
