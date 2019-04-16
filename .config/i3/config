@@ -110,12 +110,12 @@ exec --no-startup-id nm-applet
 # 启动终端
 bindsym Mod4+Return exec sakura
 # 音量调整
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
-bindsym Mod4+XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
-bindsym Mod4+XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
-bindsym Mod4+XF86AudioMute exec --no-startup-id amixer set Master toggle
+# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
+# bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
+# bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+# bindsym Mod4+XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
+# bindsym Mod4+XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
+# bindsym Mod4+XF86AudioMute exec --no-startup-id amixer set Master toggle
 # 亮度调整
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness

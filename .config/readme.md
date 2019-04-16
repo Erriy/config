@@ -32,3 +32,4 @@ pip install -r requirements.txt
 - pyenv
 - telegram-desktop
 - calibre
+- volumeicon
