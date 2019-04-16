@@ -310,31 +310,31 @@ bindsym Mod4+F11 workspace $wsf11
 bindsym Mod4+F12 workspace $wsf12
 
 # 移动当前窗口到其他的workspace
-bindsym Mod4+Shift+grave move container to workspace $ws0
-bindsym Mod4+Shift+1 move container to workspace $ws1
-bindsym Mod4+Shift+2 move container to workspace $ws2
-bindsym Mod4+Shift+3 move container to workspace $ws3
-bindsym Mod4+Shift+4 move container to workspace $ws4
-bindsym Mod4+Shift+5 move container to workspace $ws5
-bindsym Mod4+Shift+6 move container to workspace $ws6
-bindsym Mod4+Shift+7 move container to workspace $ws7
-bindsym Mod4+Shift+8 move container to workspace $ws8
-bindsym Mod4+Shift+9 move container to workspace $ws9
-bindsym Mod4+Shift+0 move container to workspace $ws10
-bindsym Mod4+Shift+Escape move container to workspace $wsesc
-bindsym Mod4+Shift+F1 move container to workspace $wsf1
-bindsym Mod4+Shift+F2 move container to workspace $wsf2
-bindsym Mod4+Shift+F3 move container to workspace $wsf3
-bindsym Mod4+Shift+F4 move container to workspace $wsf4
-bindsym Mod4+Shift+F5 move container to workspace $wsf5
-bindsym Mod4+Shift+F6 move container to workspace $wsf6
-bindsym Mod4+Shift+F7 move container to workspace $wsf7
-bindsym Mod4+Shift+F8 move container to workspace $wsf8
-bindsym Mod4+Shift+F9 move container to workspace $wsf9
-bindsym Mod4+Shift+F10 move container to workspace $wsf10
-bindsym Mod4+Shift+F11 move container to workspace $wsf11
-bindsym Mod4+Shift+F12 move container to workspace $wsf12
-bindsym Mod4+Shift+m exec --no-startup-id (input=$(echo -e "CANCEL\n$workspace_names" | $dmenu "移动当前窗口到指定workspace :") && ([ "CANCEL" = ${input} ] || i3-msg move container to workspace ${input}))
+bindsym Mod4+Shift+grave move container to workspace $ws0, workspace $ws0
+bindsym Mod4+Shift+1 move container to workspace $ws1, workspace $ws1
+bindsym Mod4+Shift+2 move container to workspace $ws2, workspace $ws2
+bindsym Mod4+Shift+3 move container to workspace $ws3, workspace $ws3
+bindsym Mod4+Shift+4 move container to workspace $ws4, workspace $ws4
+bindsym Mod4+Shift+5 move container to workspace $ws5, workspace $ws5
+bindsym Mod4+Shift+6 move container to workspace $ws6, workspace $ws6
+bindsym Mod4+Shift+7 move container to workspace $ws7, workspace $ws7
+bindsym Mod4+Shift+8 move container to workspace $ws8, workspace $ws8
+bindsym Mod4+Shift+9 move container to workspace $ws9, workspace $ws9
+bindsym Mod4+Shift+0 move container to workspace $ws10, workspace $ws10
+bindsym Mod4+Shift+Escape move container to workspace $wsesc, workspace $wsesc
+bindsym Mod4+Shift+F1 move container to workspace $wsf1, workspace $wsf1
+bindsym Mod4+Shift+F2 move container to workspace $wsf2, workspace $wsf2
+bindsym Mod4+Shift+F3 move container to workspace $wsf3, workspace $wsf3
+bindsym Mod4+Shift+F4 move container to workspace $wsf4, workspace $wsf4
+bindsym Mod4+Shift+F5 move container to workspace $wsf5, workspace $wsf5
+bindsym Mod4+Shift+F6 move container to workspace $wsf6, workspace $wsf6
+bindsym Mod4+Shift+F7 move container to workspace $wsf7, workspace $wsf7
+bindsym Mod4+Shift+F8 move container to workspace $wsf8, workspace $wsf8
+bindsym Mod4+Shift+F9 move container to workspace $wsf9, workspace $wsf9
+bindsym Mod4+Shift+F10 move container to workspace $wsf10, workspace $wsf10
+bindsym Mod4+Shift+F11 move container to workspace $wsf11, workspace $wsf11
+bindsym Mod4+Shift+F12 move container to workspace $wsf12, workspace $wsf12
+bindsym Mod4+Shift+m exec --no-startup-id (input=$(echo -e "CANCEL\n$workspace_names" | $dmenu "移动当前窗口到指定workspace :") && ([ "CANCEL" = ${input} ] || (i3-msg move container to workspace ${input} && i3-msg workspace ${input})))
 
 # 重命名workspace(移动workspace)
 bindsym Mod4+Mod1+grave rename workspace to $ws0
