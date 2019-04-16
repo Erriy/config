@@ -1,5 +1,6 @@
 # 宏 ======================================================================================================
-set $lock                   i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
+#set $lock                   i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
+set $lock                   dm-tool lock
 set $mark_names             $(~/.pyenv/shims/python ~/.config/scripts/mark.py names)
 set $workspace_names        $(~/.pyenv/shims/python ~/.config/scripts/workspace.py names)
 set $workspace_name         $(~/.pyenv/shims/python ~/.config/scripts/workspace.py name)
