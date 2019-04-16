@@ -26,7 +26,9 @@ conky.config = {
     -- 监视端口
     if_up_strictness = 'address',
     -- cpu数据监测模式，一般选2
-    cpu_avg_samples = 2
+    cpu_avg_samples = 2,
+    -- cpu占用应用的显示宽度
+    top_name_width=3
 
 }
 
@@ -44,11 +46,11 @@ ${if_up wlp2s0}\
  ${upspeed wlp2s0}/s(${totalup wlp2s0})  ${downspeed wlp2s0}/s(${totaldown wlp2s0})  \
  ${wireless_essid wlp2s0}_${wireless_bitrate wlp2s0}(${addr wlp2s0})  \
 ${endif}\
- ${cpu}%  \
+ ${cpu}%(${top name 1})  \
  ${mem}/${memmax}  \
  ${fs_used /}/${fs_size /}  \
  ${battery_percent}%(${battery_time})  \
  ${uptime_short}  \
  ${user_number}  \
- ${time %Y/%m/%d_%u_%H:%M:%S} 
+ ${time %Y/%m/%d_%a_%H:%M:%S} 
 ]]
