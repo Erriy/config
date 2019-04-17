@@ -1,6 +1,7 @@
 # 宏 ======================================================================================================
-#set $lock                   i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
-set $lock                   dm-tool lock
+set $lock                   (pgrep -x i3lock || i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000")
+# dm-tool lock 不安全：ctrl+alt+f7即可bypass，无需输入密码
+# set $lock                   dm-tool lock
 set $mark_names             $(~/.pyenv/shims/python ~/.config/scripts/mark.py names)
 set $workspace_names        $(~/.pyenv/shims/python ~/.config/scripts/workspace.py names)
 set $workspace_name         $(~/.pyenv/shims/python ~/.config/scripts/workspace.py name)
