@@ -29,6 +29,8 @@ font pango:monospace 8, FontAwesome 8
 floating_modifier Mod4
 # 有弹窗时离开全屏模式
 popup_during_fullscreen leave_fullscreen
+# 焦点跟随鼠标
+focus_follows_mouse yes
 # 工作区快速返回
 workspace_auto_back_and_forth yes
 # 显示mark标签
