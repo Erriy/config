@@ -1,5 +1,5 @@
 # 宏 ======================================================================================================
-set $lock                   pgrep -x i3lock || i3lock -i ~/.config/blackarch_logo_center_1920x1080.png -e -f -c "#000000"
+set $lock                   sh ~/.config/scripts/locker.sh
 # dm-tool lock 不安全：ctrl+alt+f7即可bypass，无需输入密码
 # set $lock                   dm-tool lock
 set $mark_names             $(~/.pyenv/shims/python ~/.config/scripts/mark.py names)
@@ -125,7 +125,7 @@ exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # goldendict词典
 # exec --no-startup-id goldendict
 # 消除sogou输入法切换时的黑色边框
-exec --no-startup-id xcompmgr
+exec --no-startup-id compton
 # 合盖自动锁定
 exec --no-startup-id xss-lock -- $lock
 # 剪贴板管理器

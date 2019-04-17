@@ -14,7 +14,7 @@ pip install -r requirements.txt
 - feh
 - goldendict
 - synclient、syndaemon
-- xcompmgr
+- compton
 - fontawesome
 - amixer
 - xbacklight
