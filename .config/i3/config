@@ -5,6 +5,7 @@ set $lock                   pgrep -x i3lock || i3lock -i ~/.config/blackarch_log
 set $mark_names             $(~/.pyenv/shims/python ~/.config/scripts/mark.py names)
 set $workspace_names        $(~/.pyenv/shims/python ~/.config/scripts/workspace.py names)
 set $workspace_name         $(~/.pyenv/shims/python ~/.config/scripts/workspace.py name)
+set $workspace_kill_all     $(~/.pyenv/shims/python ~/.config/scripts/workspace.py kill_all)
 set $current_workspace_kill ~/.pyenv/shims/python ~/.config/scripts/workspace.py kill
 set $rofi                   rofi -cycle -terminal sakura -location 0 -font "monospace 12" -matching fuzzy
 set $dmenu                  dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p
@@ -170,7 +171,7 @@ bindsym Mod4+l exec --no-startup-id $lock
 # 剪贴板管理器
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 # 关机选项
-bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "CANCEL\nSWITCH\nREBOOT\nSHUTDOWN" | $dmenu "选择操作 [REBOOT-重启|SHUTDOWN-关闭] : ") && ([ "REBOOT" = ${input} ] && systemctl reboot) || ([ "SHUTDOWN" = ${input} ] && systemctl poweroff) || ([ "SWITCH" = ${input} ] && dm-tool switch-to-greeter))
+bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "CANCEL\nSWITCH\nREBOOT\nSHUTDOWN" | $dmenu "选择操作 [REBOOT-重启|SHUTDOWN-关闭] : ") && ([ "REBOOT" = ${input} ] && $workspace_kill_all && systemctl reboot) || ([ "SHUTDOWN" = ${input} ] && $workspace_kill_all && systemctl poweroff) || ([ "SWITCH" = ${input} ] && $workspace_kill_all && dm-tool switch-to-greeter))
 # 隐藏/显示i3bar
 bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
@@ -428,7 +429,7 @@ bindsym Mod4+Mod1+c reload
 # 重新启动i3wm
 bindsym Mod4+Mod1+r restart
 # 退出i3wm
-bindsym Mod4+Mod1+e exec --no-startup-id (input=$(echo -e "CANCEL\nYES" | $dmenu "是否确认退出i3wm : ") && ([ "YES" = ${input} ] && i3-msg exit))
+bindsym Mod4+Mod1+e exec --no-startup-id (input=$(echo -e "CANCEL\nYES" | $dmenu "是否确认退出i3wm : ") && ([ "YES" = ${input} ] && $workspace_kill_all && i3-msg exit))
 
 # 窗口大小调整
 bindsym Mod4+Shift+r mode "resize"
