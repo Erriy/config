@@ -370,6 +370,7 @@ bindsym Mod4+F9 workspace $wsf9
 bindsym Mod4+F10 workspace $wsf10
 bindsym Mod4+F11 workspace $wsf11
 bindsym Mod4+F12 workspace $wsf12
+bindsym Mod4+g exec --no-startup-id (input=$(echo -e "CANCEL\n$workspace_names" | $dmenu "打开指定workspace :") && ([ "CANCEL" = ${input} ] || i3-msg workspace ${input}))
 
 # 移动当前窗口到其他的workspace
 bindsym Mod4+Shift+grave move container to workspace $ws0, workspace $ws0
