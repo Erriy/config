@@ -34,3 +34,4 @@ pip install -r requirements.txt
 - calibre
 - volumeicon
 - vimix-gtk-themes-git
+- light-locker
