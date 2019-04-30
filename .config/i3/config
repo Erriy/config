@@ -176,7 +176,7 @@ bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "CANCEL\nSWITC
 # 隐藏/显示i3bar
 bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
-set $mode_open_apps "open: (b)urpsuite, (c)hrome, (d)ict, (e)xplore, (f)irefox, (m)arkdown, (p)df, (s)sh, (t)elegram, (v)scode, (w)ireshark, (C)alibre, (R)emmina, (V)mware, (W)echat"
+set $mode_open_apps "open: (b)urpsuite, (c)hrome, (d)ict, (e)xplore, (f)irefox, (m)arkdown, (p)df, (s)sh, (t)elegram, (v)scode, (w)ireshark, (C)alibre, (E)volution, (R)emmina, (V)mware, (W)echat"
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
@@ -205,6 +205,8 @@ mode $mode_open_apps {
     bindsym p exec --no-startup-id evince, mode "default"
     # Calibre
     bindsym Shift+c exec --no-startup-id calibre, mode "default"
+    # Evolution
+    bindsym Shift+e exec --no-startup-id evolution, mode "default"
     # vmware
     bindsym Shift+v exec --no-startup-id vmware, mode "default"
     # remmina

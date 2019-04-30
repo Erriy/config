@@ -35,3 +35,4 @@ pip install -r requirements.txt
 - volumeicon
 - vimix-gtk-themes-git
 - light-locker
+- evolution
