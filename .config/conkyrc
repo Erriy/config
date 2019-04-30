@@ -50,11 +50,11 @@ ${endif}\
  ${mem}/${memmax}  \
  ${fs_used /}/${fs_size /}  \
 ${if_match "on-line"=="${acpiacadapter}"} ${else}\
-${if_match "95"<="${battery_percent}"} ${else}\
-${if_match "75"<="${battery_percent}"} ${else}\
-${if_match "50"<="${battery_percent}"} ${else}\
-${if_match "25"<="${battery_percent}"} ${else}\
-${if_match "10">="${battery_percent}"} ${else}\
+${if_match 95<=${battery_percent}} ${else}\
+${if_match 75<=${battery_percent}} ${else}\
+${if_match 50<=${battery_percent}} ${else}\
+${if_match 25<=${battery_percent}} ${else}\
+${if_match 10>=${battery_percent}} ${else}\
 ${endif}${endif}${endif}${endif}${endif}${endif}\
 ${battery_percent}%\
 ${if_match "${battery_time}"!=""}\
