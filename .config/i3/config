@@ -66,11 +66,11 @@ set $wsf11 "22:F11"
 set $wsf12 "23:F12"
 
 # 窗口颜色                边框    背景     文字     提示
-client.focused          #880000 #000000 #ff0000 #ff0000
-client.focused_inactive #000000 #000000 #008800 #3399FF
-client.unfocused        #444444 #000000 #009999 #3399FF
-client.urgent           #990000 #990000 #000000 #990000
-client.placeholder      #000000 #000000 #000000 #000000
+client.focused          #FF0000 #FF0000 #000000 #FF00FF
+client.focused_inactive #000000 #000000 #00FF00 #00FFFF
+client.unfocused        #000000 #000000 #00FFFF #00FF00
+client.urgent           #000000 #888800 #FF0000 #000000
+client.placeholder      #000000 #000000 #00FF00 #000000
 client.background       #000000
 bar {
     status_command    conky -c ~/.config/conkyrc
@@ -84,10 +84,10 @@ bar {
         background #000000
         statusline #ffffff
         # 工作区颜色         边框    背景     文字
-        focused_workspace  #ffffff #ff0000 #ffffff
-        active_workspace   #000088 #008800 #880000
-        inactive_workspace #888888 #222222 #008800
-        urgent_workspace   #ffffff #900000 #ff0000
+        focused_workspace  #FF0000 #FF0000 #000000
+        active_workspace   #888888 #888888 #00FF00
+        inactive_workspace #222222 #222222 #00FFFF
+        urgent_workspace   #000000 #000000 #FF0000
     }
 }
 # => 窗口边框类型（边框类型有normal正常/none无边框/pixel 1 自定义宽度）
