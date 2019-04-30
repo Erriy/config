@@ -46,7 +46,7 @@ ${if_up wlp2s0}\
  ${upspeed wlp2s0}/s(${totalup wlp2s0})  ${downspeed wlp2s0}/s(${totaldown wlp2s0})  \
  ${wireless_essid wlp2s0}_${wireless_bitrate wlp2s0}(${addr wlp2s0})  \
 ${endif}\
- ${cpu}%(${top name 1})  \
+ ${cpu}%${if_match "25"<"${cpu}"}(${top cpu 1}-${top name 1})${endif}  \
  ${mem}/${memmax}  \
  ${fs_used /}/${fs_size /}  \
 ${if_match "on-line"=="${acpiacadapter}"} ${else}\
@@ -55,12 +55,7 @@ ${if_match "75"<="${battery_percent}"} ${else}\
 ${if_match "50"<="${battery_percent}"} ${else}\
 ${if_match "25"<="${battery_percent}"} ${else}\
 ${if_match "10">="${battery_percent}"} ${else}\
-${endif}\
-${endif}\
-${endif}\
-${endif}\
-${endif}\
-${endif}\
+${endif}${endif}${endif}${endif}${endif}${endif}\
 ${battery_percent}%\
 ${if_match "${battery_time}"!=""}\
 (${battery_time})\
