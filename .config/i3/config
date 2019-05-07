@@ -68,7 +68,7 @@ set $wsf12 "23:F12"
 # 窗口颜色                边框    背景     文字     提示
 client.focused          #FF0000 #FF0000 #000000 #FF00FF
 client.focused_inactive #000000 #000000 #00FF00 #00FFFF
-client.unfocused        #000000 #000000 #00FFFF #00FF00
+client.unfocused        #600000 #000000 #00FFFF #00FF00
 client.urgent           #000000 #888800 #FF0000 #000000
 client.placeholder      #000000 #000000 #00FF00 #000000
 client.background       #000000
