@@ -34,6 +34,10 @@ conky.config = {
 
 
 conky.text = [[
+${if_up enp0s20u1c4i2}\
+ ${upspeed enp0s20u1c4i2}/s(${totalup enp0s20u1c4i2})  ${downspeed enp0s20u1c4i2}/s(${totaldown enp0s20u1c4i2})  \
+ ${addr enp0s20u1c4i2}  \
+${endif}\
 ${if_up enp0s20u2}\
  ${upspeed enp0s20u2}/s(${totalup enp0s20u2})  ${downspeed enp0s20u2}/s(${totaldown enp0s20u2})  \
  ${addr enp0s20u2}  \
