@@ -36,3 +36,4 @@ pip install -r requirements.txt
 - vimix-gtk-themes-git
 - light-locker
 - evolution
+- postman
