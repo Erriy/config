@@ -37,3 +37,4 @@ pip install -r requirements.txt
 - light-locker
 - evolution
 - postman
+- fusuma
