@@ -117,7 +117,7 @@ exec --no-startup-id synclient HorizScrollDelta=-103
 # 键盘打字后0.5秒才可响应触摸板事件（防误触
 exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # 启动触摸板多点触控工具
-exec --no-startup-id fusuma
+# exec --no-startup-id fusuma
 # goldendict词典
 # exec --no-startup-id goldendict
 # 消除sogou输入法切换时的黑色边框
