@@ -39,4 +39,9 @@ pip install -r requirements.txt
 - postman
 - fusuma
 - thefuck
+
+### vim 插件
+- LeaderF
+
+### shell相关
 - oh-my-zsh
