@@ -38,3 +38,5 @@ pip install -r requirements.txt
 - evolution
 - postman
 - fusuma
+- thefuck
+- oh-my-zsh
