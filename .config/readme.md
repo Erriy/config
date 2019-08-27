@@ -39,6 +39,7 @@ pip install -r requirements.txt
 - postman
 - fusuma
 - thefuck
+- gnome-calculator
 
 ### vim 插件
 - LeaderF

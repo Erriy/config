@@ -106,6 +106,7 @@ for_window [title="alsamixer"] floating enable border pixel 2
 for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
 for_window [class="Org.gnome.Nautilus"] floating enable border pixel 2
 for_window [class="Fcitx-config-gtk3"] floating enable sticky enable border pixel 2
+for_window [class="Gnome-calculator"] floating enable sticky enable border pixel 2
 # 自动跳转到紧急窗口
 for_window [urgent=latest] focus
 # 自动启动 =================================================================================================
@@ -172,7 +173,7 @@ bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "CANCEL\nSWITC
 # 隐藏/显示i3bar
 bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
-set $mode_open_apps "open: b)urpsuite, c)hrome, d)ict, e)xplore, f)irefox, m)arkdown, p)df, s)sh, t)elegram, v)scode, w)ireshark, C)alibre, E)volution, P)ostman, R)emmina, V)mware, W)echat"
+set $mode_open_apps "open: b)urpsuite, c)hrome, d)ict, e)xplore, f)irefox, m)arkdown, p)df, s)sh, t)elegram, v)scode, w)ireshark, C)alibre, E)volution, P)ostman, R)emmina, V)mware, W)echat, a-c)alc"
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
@@ -211,6 +212,8 @@ mode $mode_open_apps {
     bindsym Shift+r exec --no-startup-id remmina, mode "default"
     # 微信
     bindsym Shift+w exec --no-startup-id electronic-wechat, mode "default"
+    # 计算器
+    bindsym Mod1+c exec --no-startup-id gnome-calculator, mode "default"
 
     # 恢复默认模式
     bindsym Escape mode "default"
