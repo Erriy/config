@@ -33,8 +33,7 @@ ctrl+shift+n move-right,move-down,move-right,move-down,move-right,move-down,move
 
 space warp,click 1,end
 shift+space warp,click 3,end
-alt+space warp, drag 1
-alt+shift+space warp, drag 2
+Return warp, drag 1
 semicolon warp,end
 1 warp, click 1, end
 2 warp, click 2, end

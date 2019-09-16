@@ -1,6 +1,6 @@
 syntax on
 set nu
-set rnu
+"set rnu
 set hlsearch
 set showmode
 set cursorline
