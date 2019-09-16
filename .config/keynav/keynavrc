@@ -4,20 +4,26 @@ super+semicolon start, cursorzoom 9 18
 Escape end
 q end
 
-y move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp
-u move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp
-i move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,warp
-o move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,warp
+ctrl+super+y start, cursorzoom 9 18,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp,end
+ctrl+super+u start, cursorzoom 9 18,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp,end
+ctrl+super+i start, cursorzoom 9 18,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,warp,end
+ctrl+super+o start, cursorzoom 9 18,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,warp,end
 
-h move-left,warp
-j move-down,warp
-k move-up,warp
-l move-right,warp
+ctrl+super+h start, cursorzoom 9 18,move-left,warp, end
+ctrl+super+j start, cursorzoom 9 18,move-down,warp, end
+ctrl+super+k start, cursorzoom 9 18,move-up,warp, end
+ctrl+super+l start, cursorzoom 9 18,move-right,warp, end
 
-n move-left .30,warp
-m move-down .30,warp
-comma move-up .30,warp
-period move-right .30,warp
+ctrl+super+n start, cursorzoom 9 18,move-left .30,warp, end
+ctrl+super+m start, cursorzoom 9 18,move-down .30,warp, end
+ctrl+super+comma start, cursorzoom 9 18,move-up .30,warp, end
+ctrl+super+period start, cursorzoom 9 18,move-right .30,warp, end
+
+ctrl+super+space start, click 1, end
+ctrl+super+Return start, click 3, end
+ctrl+super+1 start, click 1, end
+ctrl+super+2 start, click 2, end
+ctrl+super+3 start, click 3, end
 
 space warp,click 1
 shift+space warp, drag 1
