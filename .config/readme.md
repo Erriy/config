@@ -42,6 +42,9 @@ pip install -r requirements.txt
 - gnome-calculator
 - blueman
 
+## yaourt
+- keynav-git
+
 ### vim 插件
 - LeaderF
 
