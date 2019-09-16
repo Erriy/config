@@ -4,25 +4,24 @@ super+semicolon start, cursorzoom 9 18
 Escape end
 q end
 
-y move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left
-u move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down
-i move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up
-o move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right
+y move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp
+u move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp
+i move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,warp
+o move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,warp
 
-h move-left
-j move-down
-k move-up
-l move-right
+h move-left,warp
+j move-down,warp
+k move-up,warp
+l move-right,warp
 
-n move-left .30
-m move-down .30
-comma move-up .30
-period move-right .30
+n move-left .30,warp
+m move-down .30,warp
+comma move-up .30,warp
+period move-right .30,warp
 
 space warp,click 1
 shift+space warp, drag 1
 Return warp, click 3
-semicolon warp
 1 warp, click 1
 2 warp, click 2
 3 warp, click 3
