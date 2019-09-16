@@ -1,35 +1,35 @@
 clear
 
-super+semicolon start, cursorzoom 50 25
+super+semicolon start, cursorzoom 9 18
 Escape end
 ctrl+bracketleft end
 q end
 
-h cut-left
-j cut-down
-k cut-up
-l cut-right
-y cut-left,cut-up
-u cut-right,cut-up
-b cut-left,cut-down
-n cut-right,cut-down
+h move-left
+j move-down
+k move-up
+l move-right
+y move-left,move-up
+u move-right,move-up
+b move-left,move-down
+n move-right,move-down
 
-shift+h move-left
-shift+j move-down
-shift+k move-up
-shift+l move-right
-shift+y move-left,move-up
-shift+u move-right,move-up
-shift+b move-left,move-down
-shift+n move-right,move-down
-ctrl+shift+h move-left,move-left,move-left,move-left,move-left
-ctrl+shift+j move-down,move-down,move-down,move-down,move-down
-ctrl+shift+k move-up,move-up,move-up,move-up,move-up
-ctrl+shift+l move-right,move-right,move-right,move-right,move-right
-ctrl+shift+y move-left,move-up,move-left,move-up,move-left,move-up,move-left,move-up,move-left,move-up
-ctrl+shift+u move-right,move-up,move-right,move-up,move-right,move-up,move-right,move-up,move-right,move-up
-ctrl+shift+b move-left,move-down,move-left,move-down,move-left,move-down,move-left,move-down,move-left,move-down
-ctrl+shift+n move-right,move-down,move-right,move-down,move-right,move-down,move-right,move-down,move-right,move-down
+shift+h move-left .50
+shift+j move-down .50
+shift+k move-up .50
+shift+l move-right .50
+shift+y move-left,move-up .50
+shift+u move-right,move-up .50
+shift+b move-left,move-down .50
+shift+n move-right,move-down .50
+ctrl+shift+h move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left
+ctrl+shift+j move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down
+ctrl+shift+k move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up
+ctrl+shift+l move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right
+ctrl+shift+y move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up
+ctrl+shift+u move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up
+ctrl+shift+b move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down
+ctrl+shift+n move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down
 
 space warp,click 1
 shift+space warp, drag 1
@@ -51,14 +51,6 @@ Left cut-left
 Down cut-down
 Up cut-up
 Right cut-right
-shift+Left move-left
-shift+Down move-down
-shift+Up move-up
-shift+Right move-right
-ctrl+shift+Left move-left,move-left,move-left,move-left,move-left
-ctrl+shift+Down move-down,move-down,move-down,move-down,move-down
-ctrl+shift+Up move-up,move-up,move-up,move-up,move-up
-ctrl+shift+Right move-right,move-right,move-right,move-right,move-right
 
 super+shift+semicolon start, grid 3x2
 Insert cell-select 1x1
