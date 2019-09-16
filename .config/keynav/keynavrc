@@ -31,13 +31,16 @@ ctrl+shift+u move-right,move-up,move-right,move-up,move-right,move-up,move-right
 ctrl+shift+b move-left,move-down,move-left,move-down,move-left,move-down,move-left,move-down,move-left,move-down
 ctrl+shift+n move-right,move-down,move-right,move-down,move-right,move-down,move-right,move-down,move-right,move-down
 
-space warp,click 1,end
-shift+space warp,click 3,end
-Return warp, drag 1
-semicolon warp,end
-1 warp, click 1, end
-2 warp, click 2, end
-3 warp, click 3, end
+space warp,click 1
+shift+space warp, drag 1
+Return warp, click 3
+semicolon warp
+1 warp, click 1
+2 warp, click 2
+3 warp, click 3
+
+v sh "xdotool key shift+Insert"
+c sh "xdotool key
 
 w warp, click 4
 s warp, click 5
