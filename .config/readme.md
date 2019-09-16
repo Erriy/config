@@ -40,6 +40,7 @@ pip install -r requirements.txt
 - fusuma
 - thefuck
 - gnome-calculator
+- blueman
 
 ### vim 插件
 - LeaderF
