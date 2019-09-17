@@ -124,8 +124,8 @@ exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # 消除sogou输入法切换时的黑色边框
 exec --no-startup-id xcompmgr
 # 合盖自动锁定
-exec --no-startup-id light-locker
-# exec --no-startup-id xss-lock -- $lock
+# exec --no-startup-id light-locker
+exec --no-startup-id xss-lock -- $lock
 # 剪贴板管理器
 exec --no-startup-id copyq
 # 启动网络管理器
