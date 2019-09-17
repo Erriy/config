@@ -169,11 +169,11 @@ bindsym Mod4+r exec --no-startup-id $rofi -show run
 # 快速切换窗口
 bindsym Mod4+Tab exec --no-startup-id $rofi -show window
 # 系统锁定
-bindsym Mod4+l exec --no-startup-id $lock
+# bindsym Mod4+l exec --no-startup-id $lock
 # 剪贴板管理器
 bindsym Control+Mod1+v exec --no-startup-id copyq show
 # 关机选项
-bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "CANCEL\nSWITCH\nREBOOT\nSHUTDOWN" | $dmenu "选择操作 [REBOOT-重启|SHUTDOWN-关闭] : ") && ([ "REBOOT" = ${input} ] && $workspace_kill_all && systemctl reboot) || ([ "SHUTDOWN" = ${input} ] && $workspace_kill_all && systemctl poweroff) || ([ "SWITCH" = ${input} ] && $workspace_kill_all && dm-tool switch-to-greeter))
+bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "LOCK\nREBOOT\nSHUTDOWN" | $dmenu "选择操作 [REBOOT-重启|SHUTDOWN-关闭] : ") && ([ "REBOOT" = ${input} ] && $workspace_kill_all && systemctl reboot) || ([ "SHUTDOWN" = ${input} ] && $workspace_kill_all && systemctl poweroff) || ([ "LOCK" = ${input} ] && $lock))
 # 隐藏/显示i3bar
 bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
@@ -331,18 +331,22 @@ bindsym Mod4+Left focus left
 bindsym Mod4+Down focus down
 bindsym Mod4+Up focus up
 bindsym Mod4+Right focus right
-bindsym Mod4+j focus left
-bindsym Mod4+k focus right
+bindsym Mod4+h focus left
+bindsym Mod4+j focus down
+bindsym Mod4+k focus up
+bindsym Mod4+l focus right
 # 移动窗口
-bindsym Mod4+Shift+j move left
+bindsym Mod4+Shift+h move left
 bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+j move down
 bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+k move up
 bindsym Mod4+Shift+Up move up
-bindsym Mod4+Shift+k move right
+bindsym Mod4+Shift+l move right
 bindsym Mod4+Shift+Right move right
 # 下一个窗口的开启位置
-bindsym Mod4+Shift+h split h
-bindsym Mod4+Shift+v split v
+# bindsym Mod4+Shift+h split h
+bindsym Mod4+Shift+v split toggle
 # 当前窗口全屏
 bindsym Mod4+Shift+f fullscreen toggle
 # 窗口显示模式切换
