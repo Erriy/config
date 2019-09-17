@@ -1,34 +1,34 @@
 clear
 
-super+semicolon start, cursorzoom 9 18
+alt+semicolon start, cursorzoom 9 18
 Escape end
 q end
 
-ctrl+super+y start, cursorzoom 9 18,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp,end
-ctrl+super+u start, cursorzoom 9 18,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp,end
-ctrl+super+i start, cursorzoom 9 18,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,warp,end
-ctrl+super+o start, cursorzoom 9 18,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,warp,end
+ctrl+alt+y start, cursorzoom 9 18,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp,end
+ctrl+alt+u start, cursorzoom 9 18,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp,end
+ctrl+alt+i start, cursorzoom 9 18,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,warp,end
+ctrl+alt+o start, cursorzoom 9 18,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,warp,end
 
-ctrl+super+h start, cursorzoom 9 18,move-left,warp, end
-ctrl+super+j start, cursorzoom 9 18,move-down,warp, end
-ctrl+super+k start, cursorzoom 9 18,move-up,warp, end
-ctrl+super+l start, cursorzoom 9 18,move-right,warp, end
+ctrl+alt+h start, cursorzoom 9 18,move-left,warp, end
+ctrl+alt+j start, cursorzoom 9 18,move-down,warp, end
+ctrl+alt+k start, cursorzoom 9 18,move-up,warp, end
+ctrl+alt+l start, cursorzoom 9 18,move-right,warp, end
 
-ctrl+super+n start, cursorzoom 9 18,move-left .30,warp, end
-ctrl+super+m start, cursorzoom 9 18,move-down .30,warp, end
-ctrl+super+comma start, cursorzoom 9 18,move-up .30,warp, end
-ctrl+super+period start, cursorzoom 9 18,move-right .30,warp, end
+ctrl+alt+n start, cursorzoom 9 18,move-left .30,warp, end
+ctrl+alt+m start, cursorzoom 9 18,move-down .30,warp, end
+ctrl+alt+comma start, cursorzoom 9 18,move-up .30,warp, end
+ctrl+alt+period start, cursorzoom 9 18,move-right .30,warp, end
 
-ctrl+super+space start, click 1, end
-ctrl+super+shift+space start, cursorzoom 9 18, drag 1
-ctrl+super+Return start, click 3, end
-ctrl+super+1 start, click 1, end
-ctrl+super+2 start, click 2, end
-ctrl+super+3 start, click 3, end
-ctrl+super+w start, click 4, end
-ctrl+super+s start, click 5, end
-ctrl+super+a start, click 6, end
-ctrl+super+d start, click 7, end
+ctrl+alt+space start, click 1, end
+ctrl+alt+shift+space start, cursorzoom 9 18, drag 1
+ctrl+alt+Return start, click 3, end
+ctrl+alt+1 start, click 1, end
+ctrl+alt+2 start, click 2, end
+ctrl+alt+3 start, click 3, end
+ctrl+alt+w start, click 4, end
+ctrl+alt+s start, click 5, end
+ctrl+alt+a start, click 6, end
+ctrl+alt+d start, click 7, end
 
 
 y move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp
@@ -66,7 +66,7 @@ Down cut-down
 Up cut-up
 Right cut-right
 
-super+shift+semicolon start, grid 3x2
+alt+shift+semicolon start, grid 3x2
 Insert cell-select 1x1
 Home cell-select 2x1
 Prior cell-select 3x1   # PageUp
