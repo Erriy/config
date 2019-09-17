@@ -35,6 +35,10 @@ ctrl+alt+s start, click 5, end
 ctrl+alt+a start, click 6, end
 ctrl+alt+d start, click 7, end
 
+6 move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp
+7 move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp
+8 move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,warp
+9 move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,warp
 
 y move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp
 u move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp
