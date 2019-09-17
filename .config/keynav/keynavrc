@@ -4,6 +4,11 @@ alt+semicolon start, cursorzoom 9 18
 Escape end
 q end
 
+ctrl+alt+6 start, cursorzoom 9 18,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp,end
+ctrl+alt+7 start, cursorzoom 9 18,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp,end
+ctrl+alt+8 start, cursorzoom 9 18,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,warp,end
+ctrl+alt+9 start, cursorzoom 9 18,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right,warp,end
+
 ctrl+alt+y start, cursorzoom 9 18,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left,warp,end
 ctrl+alt+u start, cursorzoom 9 18,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down,warp,end
 ctrl+alt+i start, cursorzoom 9 18,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up,warp,end
