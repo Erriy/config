@@ -1,7 +1,7 @@
 # 宏 ======================================================================================================
-set $lock                   sh ~/.config/scripts/locker.sh
+# set $lock                   sh ~/.config/scripts/locker.sh
 # dm-tool lock 依赖 light-locker，如果不启用light-locker，则使用ctrl+alt+f7即可越过密码验证
-# set $lock                   dm-tool lock
+set $lock                   dm-tool lock
 set $mark_names             $(~/.pyenv/shims/python ~/.config/scripts/mark.py names)
 set $workspace_names        $(~/.pyenv/shims/python ~/.config/scripts/workspace.py names)
 set $workspace_name         $(~/.pyenv/shims/python ~/.config/scripts/workspace.py name)
