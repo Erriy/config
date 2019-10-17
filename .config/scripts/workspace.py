@@ -34,7 +34,7 @@ def kill(name):
 
 
 @workspace.command()
-def kill_all():
+def killall():
     con = i3ipc.Connection()
     wjs = con.get_workspaces()
     list(map(lambda x: con.command("[workspace=%s] kill"%x["name"]), wjs))

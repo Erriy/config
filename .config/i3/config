@@ -5,7 +5,7 @@ set $lock                   dm-tool lock
 set $mark_names             $(~/.pyenv/shims/python ~/.config/scripts/mark.py names)
 set $workspace_names        $(~/.pyenv/shims/python ~/.config/scripts/workspace.py names)
 set $workspace_name         $(~/.pyenv/shims/python ~/.config/scripts/workspace.py name)
-set $workspace_kill_all     $(~/.pyenv/shims/python ~/.config/scripts/workspace.py kill_all)
+set $workspace_kill_all     $(~/.pyenv/shims/python ~/.config/scripts/workspace.py killall)
 set $current_workspace_kill ~/.pyenv/shims/python ~/.config/scripts/workspace.py kill
 set $rofi                   rofi -cycle -terminal sakura -location 0 -font "monospace 12" -matching fuzzy
 set $dmenu                  dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p
