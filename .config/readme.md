@@ -318,5 +318,4 @@ pip install -r ~/.config/scripts/requirements.txt
 
 # 忘了包含在哪个包里了
 synclient syndaemon fontawesome amixer xbacklight fusuma
-
 ```
