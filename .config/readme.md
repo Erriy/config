@@ -50,3 +50,23 @@ pip install -r requirements.txt
 
 ### shell相关
 - oh-my-zsh
+
+
+### 安装命令
+
+``` shell
+sudo pacman -Syu i3-gaps i3lock notify-osd conky feh goldendict compton scrot gimp rofi thunar code xss-lock copyq networkmanager network-manager-applet sakura pyenv telegram-desktop calibre volumeicon vimix-gtk-themes-git light-locker evolution postman-bin  thefuck gnome-calculator blueman htop screenfetch neofetch fish zsh tmux git wpa_supplicant google-chrome shadowsocks docker docker-compose openssh xorg fcitx xorg-xinit lightdm lightdm-gtk-greeter dmenu ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts wqy-zenhei ttf-fireflysung
+
+useradd -m erriy
+passwd erriy
+visudo
+su erriy
+chsh -s `which fish`
+git clone git@github.com:Erriy/config.git
+pyenv install 3.7.2 2.7.15
+pyenv local 3.7.2 2.7.15
+pip install -r ~/.config/scripts/requirements.txt
+
+synclient syndaemon fontawesome amixer xbacklight fusuma
+
+```

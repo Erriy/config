@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/erriy/.oh-my-zsh"
 export VISUAL="vim"
-export PATH="$PATH:/home/erriy/Documents/sources/depot_tools"
+export PATH="$PATH"
 export TERMINAL="sakura"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
