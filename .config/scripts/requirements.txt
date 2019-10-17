@@ -1,2 +1,2 @@
 click
-i3ipc
+i3ipc==1.6.0
