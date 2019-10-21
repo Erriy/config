@@ -175,7 +175,7 @@ sudo ./strap.sh
 
 ``` shell
 # 依赖包
-sudo pacman -Syu i3-gaps i3lock notify-osd conky feh goldendict compton scrot gimp rofi thunar code xss-lock copyq networkmanager network-manager-applet sakura pyenv telegram-desktop calibre volumeicon vimix-gtk-themes-git light-locker evolution postman-bin  thefuck gnome-calculator blueman htop screenfetch neofetch fish zsh tmux git wpa_supplicant google-chrome shadowsocks docker docker-compose openssh xorg fcitx xorg-xinit lightdm lightdm-gtk-greeter dmenu ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts wqy-zenhei ttf-fireflysung iftop linux-headers tlp tlp-rdw tp_smapi acpi_call fcitx-sunpinyin fcitx-gtk3 lightdm-slick-greeter
+sudo pacman -Syu i3-gaps i3lock notify-osd conky feh goldendict compton scrot gimp rofi thunar code xss-lock copyq networkmanager network-manager-applet sakura pyenv telegram-desktop calibre volumeicon vimix-gtk-themes-git light-locker evolution postman-bin  thefuck gnome-calculator blueman htop screenfetch neofetch fish zsh tmux git wpa_supplicant google-chrome shadowsocks docker docker-compose openssh xorg fcitx xorg-xinit lightdm lightdm-gtk-greeter dmenu ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts wqy-zenhei ttf-fireflysung iftop linux-headers tlp tlp-rdw tp_smapi acpi_call fcitx-sunpinyin fcitx-gtk3 lightdm-slick-greeter nautilusfirefox wireshark-qt typora evince remmina xf86-input-synaptics
 # 配置lightdm
 sudo cp .config/lightdm/* /etc/lightdm/
 sudo systemctl enable lightdm.service
@@ -198,5 +198,5 @@ pyenv local 3.7.2 2.7.15
 pip install -r ~/.config/scripts/requirements.txt
 
 # 以下的包忘了包含在哪个包里了
-synclient syndaemon fontawesome amixer fusuma
+fontawesome amixer fusuma
 ```
