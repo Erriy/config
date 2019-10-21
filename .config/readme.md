@@ -175,7 +175,7 @@ sudo ./strap.sh
 
 ``` shell
 # 依赖包
-sudo pacman -Syu i3-gaps i3lock notify-osd conky feh goldendict compton scrot gimp rofi thunar code xss-lock copyq networkmanager network-manager-applet sakura pyenv telegram-desktop calibre volumeicon vimix-gtk-themes-git light-locker evolution postman-bin  thefuck gnome-calculator blueman htop screenfetch neofetch fish zsh tmux git wpa_supplicant google-chrome shadowsocks docker docker-compose openssh xorg fcitx xorg-xinit lightdm lightdm-gtk-greeter dmenu ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts wqy-zenhei ttf-fireflysung iftop linux-headers tlp tlp-rdw tp_smapi acpi_call fcitx-sunpinyin fcitx-gtk3 lightdm-slick-greeter nautilusfirefox wireshark-qt typora evince remmina xf86-input-synaptics wget
+sudo pacman -Syu i3-gaps i3lock notify-osd conky feh goldendict compton scrot gimp rofi thunar code xss-lock copyq networkmanager network-manager-applet sakura pyenv telegram-desktop calibre volumeicon vimix-gtk-themes-git light-locker evolution postman-bin  thefuck gnome-calculator blueman htop screenfetch neofetch fish zsh tmux git wpa_supplicant google-chrome shadowsocks docker docker-compose openssh xorg fcitx xorg-xinit lightdm lightdm-gtk-greeter dmenu ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts wqy-zenhei ttf-fireflysung iftop linux-headers tlp tlp-rdw tp_smapi acpi_call fcitx-sunpinyin fcitx-gtk3 lightdm-slick-greeter nautilusfirefox wireshark-qt typora evince remmina xf86-input-synaptics wget ttf-fira-code
 # 配置lightdm
 sudo cp .config/lightdm/* /etc/lightdm/
 sudo systemctl enable lightdm.service
@@ -189,6 +189,10 @@ useradd -m erriy
 passwd erriy
 visudo
 su erriy
+# 如果是nvidia独显的话，添加nvidia驱动和bumblebee，注意安装nvidia驱动的正确版本
+sudo pacman -S nvidia bumblebee
+sudo systemctl enable bumblebeed
+sudo gpasswd -a erriy bumblebee
 # 安装oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # 下载配置
