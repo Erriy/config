@@ -202,7 +202,8 @@ git clone git@github.com:Erriy/config.git
 pyenv install 3.7.2 2.7.15
 pyenv local 3.7.2 2.7.15
 pip install -r ~/.config/scripts/requirements.txt
-
+# 安装字体显示补丁
+yaourt freetype2-infinality
 # 以下的包忘了包含在哪个包里了
 fontawesome amixer fusuma
 ```
