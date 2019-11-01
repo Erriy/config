@@ -176,7 +176,8 @@ sudo ./strap.sh
 ``` shell
 # 依赖包
 
-sudo pacman -Syu i3-gaps i3lock notify-osd conky feh goldendict compton scrot gimp rofi thunar code xss-lock copyq networkmanager network-manager-applet sakura pyenv telegram-desktop calibre volumeicon vimix-gtk-themes-git light-locker evolution postman-bin  thefuck gnome-calculator blueman htop screenfetch neofetch fish zsh tmux git wpa_supplicant google-chrome shadowsocks docker docker-compose openssh xorg fcitx xorg-xinit lightdm lightdm-gtk-greeter dmenu ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts wqy-zenhei ttf-fireflysung iftop linux-headers tlp tlp-rdw tp_smapi acpi_call fcitx-sunpinyin fcitx-gtk3 lightdm-slick-greeter nautilusfirefox wireshark-qt typora evince remmina xf86-input-synaptics wget ttf-fira-code acpid lxappearance noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+sudo pacman -Syu acpi_call acpid adobe-source-han-sans-cn-fonts blueman calibre code compton conky copyq dmenu docker docker-compose evince evolution fcitx fcitx-gtk3 fcitx-sunpinyin feh fish freetype2 freetype2-demos freetype2-docs gimp git gnome-calculator gnome-font-viewer goldendict google-chrome htop i3-gaps i3lock iftop lightdm lightdm-gtk-greeter lightdm-slick-greeter light-locker linux-headers lxappearance nautilus firefox neofetch networkmanager network-manager-applet notify-osd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra opendesktop-fonts openssh postman-bin pyenv remmina rofi sakura screenfetch scrot shadowsocks telegram-desktop thefuck thunar tlp tlp-rdw tmux tp_smapi ttf-fira-code ttf-fireflysung ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts typora vimix-gtk-themes-git volumeicon wget wireshark-qt wpa_supplicant wqy-zenhei xf86-input-synaptics xorg xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-cyrillic xorg-fonts-encodings xorg-fonts-misc xorg-fonts-type1 xorg-font-util xorg-mkfontscale xorg-xfontsel xorg-xinit xorg-xlsfonts xss-lock zsh
+
 # 配置lightdm
 sudo cp .config/lightdm/* /etc/lightdm/
 sudo systemctl enable lightdm.service
@@ -209,8 +210,9 @@ git clone git@github.com:Erriy/config.git
 pyenv install 3.7.2 2.7.15
 pyenv local 3.7.2 2.7.15
 pip install -r ~/.config/scripts/requirements.txt
-# 安装字体显示补丁
-yaourt freetype2-infinality
+# 安装字体
+yaourt ttl-meslo
+# 安装字体 fontawesome,在fonts 文件夹里
 # 以下的包忘了包含在哪个包里了
 fusuma
 ```
