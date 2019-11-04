@@ -180,6 +180,7 @@ sudo pacman -Syu acpi_call acpid adobe-source-han-sans-cn-fonts blueman calibre 
 
 # 配置lightdm
 sudo cp .config/lightdm/* /etc/lightdm/
+sudo cp ~/.config/wallpaper/blackarch_logo_center_1920x1080.png /etc/lightdm/wallpaper
 sudo systemctl enable lightdm.service
 # 启动acpid
 sudo systemctl enable acpid
