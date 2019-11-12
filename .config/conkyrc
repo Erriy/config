@@ -56,7 +56,7 @@ ${if_up wlp3s0}\
 ${endif}\
  ${cpu}%${if_match 25<=${cpu}}(${top cpu 1}-${top name 1})${endif}  \
  ${mem}/${memmax}  \
- ${fs_used /}/${fs_size /}  \
+ ${fs_used /}/${fs_size /}(${diskio_read}/${diskio_write})  \
 ${if_match "on-line"=="${acpiacadapter}"} ${else}\
 ${if_match 90<=${battery_percent}} ${else}\
 ${if_match 60<=${battery_percent}} ${else}\
