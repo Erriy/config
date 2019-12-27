@@ -111,7 +111,7 @@ for_window [class="Gnome-calculator"] floating enable sticky enable border pixel
 for_window [urgent=latest] focus
 # 自动启动 =================================================================================================
 # 设置壁纸
-exec --no-startup-id feh --bg-center ~/.config/wallpaper/blackarch_logo_center_1920x1080.png
+exec --no-startup-id feh --bg-center ~/.config/wallpaper/wallpaper.wiki-Free-Arch-Linux-Image-PIC-WPC004816.png
 # 触摸板双指自然滚动
 exec --no-startup-id synclient VertScrollDelta=-103
 exec --no-startup-id synclient HorizScrollDelta=-103
