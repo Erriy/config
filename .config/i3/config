@@ -152,8 +152,8 @@ bindsym Mod4+Return exec sakura
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 # 截图
-bindsym Print exec --no-startup-id scrot -e 'mv $f /tmp/ && copyq write image/gif - < /tmp/$f'
-bindsym Mod4+Print --release exec --no-startup-id scrot -s -e 'mv $f /tmp/ && copyq write image/gif - < /tmp/$f'
+bindsym Print exec --no-startup-id flameshot full
+bindsym Mod4+Print --release exec --no-startup-id flameshot gui
 # 锁定、解锁触摸板
 # bindsym Mod4+Mod1+l exec --no-startup-id "(synclient TouchpadOff=$(synclient | sed '/TouchpadOff/{s/0/1/; t;s/2/1/; t;s/1/0/;}' | sed -rn 's/.*TouchpadOff.*=.*([0-9]+)/\1/p')) && killall syndaemon && syndaemon -i 0.5 -t -K -R -d"
 # => 暂存窗口（额外的可隐藏浮动窗口，取消浮动还原成普通窗口）
