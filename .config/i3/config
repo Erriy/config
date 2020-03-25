@@ -105,6 +105,8 @@ for_window [class="Nm-connection-editor"] floating enable sticky enable border p
 for_window [title="alsamixer"] floating enable border pixel 2
 for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
 for_window [class="Org.gnome.Nautilus"] floating enable border pixel 2
+for_window [class="Thunar"] floating enable border pixel 2
+for_window [class="Nemo"] floating enable border pixel 2
 for_window [class="Fcitx-config-gtk3"] floating enable sticky enable border pixel 2
 for_window [class="Gnome-calculator"] floating enable sticky enable border pixel 2
 for_window [class="GitHub Desktop"] floating enable sticky enable borders none
@@ -180,9 +182,11 @@ mode $mode_open_apps {
     # vscode
     bindsym v exec --no-startup-id code --new-window, mode "default"
     # nautilus文件管理器
-    bindsym e exec --no-startup-id nautilus, mode "default"
+    # bindsym e exec --no-startup-id nautilus, mode "default"
     # thunar文件管理器
     # bindsym e exec --no-startup-id thunar, mode "default"
+    # nemo文件管理器
+    bindsym e exec --no-startup-id nemo, mode "default"
     # chrome
     bindsym c exec --no-startup-id google-chrome-stable, mode "default"
     # goldendict
