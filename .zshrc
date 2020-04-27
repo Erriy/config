@@ -74,6 +74,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval $(thefuck --alias)
+eval "$(pyenv virtualenv-init -)"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
