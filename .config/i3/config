@@ -135,7 +135,7 @@ exec --no-startup-id nm-applet
 # 启动音量管理器
 exec --no-startup-id volumeicon
 # 启动蓝牙管理器
-# exec --no-startup-id blueman-tray
+exec --no-startup-id blueman-tray
 # 启动键盘操作鼠标工具
 # exec --no-startup-id keynav
 
