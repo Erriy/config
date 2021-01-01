@@ -99,6 +99,7 @@ new_float normal
 hide_edge_borders both
 # 特例窗口样式
 for_window [class="copyq"] floating enable sticky enable border pixel 2
+for_window [class="third"] floating enable sticky enable border normal 
 for_window [class="electronic-wechat"] floating enable sticky enable border pixel 2
 for_window [class="TelegramDesktop"] floating enable sticky enable border pixel 2
 for_window [class="Nm-connection-editor"] floating enable sticky enable border pixel 2
@@ -126,7 +127,7 @@ exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # 启动渲染引擎
 exec --no-startup-id picom -b --config ~/.config/picom.conf
 # 合盖自动锁定
-exec --no-startup-id light-locker
+# exec --no-startup-id light-locker
 # exec --no-startup-id xss-lock -- $lock
 # 剪贴板管理器
 exec --no-startup-id copyq
