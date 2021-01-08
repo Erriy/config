@@ -176,7 +176,7 @@ sudo ./strap.sh
 ``` shell
 # 依赖包
 
-sudo pacman -Syu acpi_call acpid adobe-source-han-sans-cn-fonts blueman calibre code compton conky copyq dmenu docker docker-compose evince evolution fcitx fcitx-gtk3 fcitx-sunpinyin feh fish flameshot freetype2 freetype2-demos freetype2-docs gimp git github-desktop gnome-calculator gnome-font-viewer gnome-keyring goldendict google-chrome htop i3-gaps i3lock iftop lightdm lightdm-gtk-greeter lightdm-slick-greeter light-locker linux-headers lxappearance nautilus firefox neofetch networkmanager network-manager-applet notify-osd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra opendesktop-fonts openssh postman-bin pyenv pyenv-virtualenv remmina rofi sakura screenfetch scrot shadowsocks telegram-desktop thunar tlp tlp-rdw tmux tp_smapi ttf-fira-code ttf-fireflysung ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts typora vimix-gtk-themes-git volumeicon wget wireshark-qt wpa_supplicant wqy-zenhei xf86-input-synaptics xorg xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-cyrillic xorg-fonts-encodings xorg-fonts-misc xorg-fonts-type1 xorg-font-util xorg-mkfontscale xorg-xfontsel xorg-xinit xorg-xlsfonts xss-lock zsh mpv
+sudo pacman -Syu acpi_call acpid adobe-source-han-sans-cn-fonts blueman calibre code compton conky copyq dmenu docker docker-compose evince evolution fcitx5-chinese-addons fcitx5-git fcitx5-gtk fcitx5-qt fcitx5-pinyin-zhwiki kcm-fcitx5 feh fish flameshot freetype2 freetype2-demos freetype2-docs gimp git github-desktop gnome-calculator gnome-font-viewer gnome-keyring goldendict google-chrome htop i3-gaps i3lock iftop lightdm lightdm-gtk-greeter lightdm-slick-greeter light-locker linux-headers lxappearance nautilus firefox neofetch networkmanager network-manager-applet notify-osd noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra opendesktop-fonts openssh postman-bin pyenv pyenv-virtualenv remmina rofi sakura screenfetch scrot shadowsocks telegram-desktop thunar tlp tlp-rdw tmux tp_smapi ttf-fira-code ttf-fireflysung ttf-font-awesome ttf-ubuntu-font-family ttf-wps-fonts typora vimix-gtk-themes-git volumeicon wget wireshark-qt wpa_supplicant wqy-zenhei xf86-input-synaptics xorg xorg-fonts-100dpi xorg-fonts-75dpi xorg-fonts-cyrillic xorg-fonts-encodings xorg-fonts-misc xorg-fonts-type1 xorg-font-util xorg-mkfontscale xorg-xfontsel xorg-xinit xorg-xlsfonts xss-lock zsh mpv
 
 # 配置lightdm
 sudo cp .config/lightdm/* /etc/lightdm/
@@ -213,6 +213,8 @@ pyenv local 3.7.2 2.7.15
 pip install -r ~/.config/scripts/requirements.txt
 # 安装字体
 yaourt ttl-meslo
+# 安装输入法主题
+yaourt fcitx5-material-color
 # 安装字体 fontawesome,在fonts 文件夹里
 # 以下的包忘了包含在哪个包里了
 fusuma
