@@ -216,6 +216,4 @@ yaourt ttl-meslo
 # 安装输入法主题
 yaourt fcitx5-material-color
 # 安装字体 fontawesome,在fonts 文件夹里
-# 以下的包忘了包含在哪个包里了
-fusuma
 ```
