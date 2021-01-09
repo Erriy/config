@@ -110,7 +110,7 @@ for_window [title="alsamixer"] floating enable border pixel 2
 for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
 for_window [class="Org.gnome.Nautilus"] floating enable border pixel 2
 for_window [class="Pcmanfm"] floating enable border pixel 2
-for_window [class="Gnome-calculator"] floating enable sticky enable border pixel 2
+for_window [class="Qalculate-gtk"] floating enable sticky enable border pixel 2
 # 自动跳转到紧急窗口
 for_window [urgent=latest] focus
 # 自动启动 =================================================================================================
@@ -205,7 +205,7 @@ mode $mode_open_apps {
     # Remmina
     bindsym Shift+r exec --no-startup-id remmina, mode "default"
     # 计算器
-    bindsym Mod1+c exec --no-startup-id gnome-calculator, mode "default"
+    bindsym Mod1+c exec --no-startup-id Qalculate-gtk, mode "default"
 
     # 恢复默认模式
     bindsym Escape mode "default"
