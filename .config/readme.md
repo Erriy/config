@@ -41,6 +41,7 @@ pip install -r requirements.txt
 - gnome-calculator
 - blueman
 - gnome-keying
+- pcmanfm
 
 ## yaourt
 - keynav-git
