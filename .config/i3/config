@@ -124,8 +124,7 @@ exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # 启动渲染引擎
 exec --no-startup-id picom -b --config ~/.config/picom.conf
 # 合盖自动锁定
-# exec --no-startup-id light-locker
-# exec --no-startup-id xss-lock -- $lock
+exec --no-startup-id light-locker
 # 剪贴板管理器
 exec --no-startup-id copyq
 # 启动网络管理器
