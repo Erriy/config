@@ -1,11 +1,11 @@
 define link
-	trash ~/.$(1)
+	- trash ~/.$(1)
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-.PHONY: all i3 fcitx5
+.PHONY: all i3 fcitx5 xprofile
 
-all: i3 fcitx5
+all: i3 fcitx5 xprofile
 
 i3:
 	- mkdir -p ~/.config/i3/
@@ -17,3 +17,6 @@ fcitx5:
 	$(call link,local/share/fcitx5/punctuation/punc.mb.zh_CN)
 	$(call link,config/fcitx5)
 
+
+xprofile:
+	$(call link,xprofile)
