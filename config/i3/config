@@ -95,7 +95,7 @@ for_window [class="Nm-connection-editor"] floating enable sticky enable border p
 for_window [title="alsamixer"] floating enable border pixel 2
 for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
 for_window [class="Org.gnome.Nautilus"] floating enable border pixel 2
-for_window [class="Nemo"] floating enable border pixel 2
+for_window [class="Thunar"] floating enable border pixel 2
 for_window [class="Qalculate-gtk"] floating enable sticky enable border pixel 2
 # 自动跳转到紧急窗口
 for_window [urgent=latest] focus
@@ -161,7 +161,7 @@ mode $mode_open_apps {
     # vscode
     bindsym v exec --no-startup-id visual-studio-code --new-window, mode "default"
     # 文件管理器
-    bindsym e exec --no-startup-id nemo, mode "default"
+    bindsym e exec --no-startup-id thunar, mode "default"
     # chrome
     bindsym c exec --no-startup-id google-chrome-stable, mode "default"
     # firefox
