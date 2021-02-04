@@ -3,9 +3,9 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-.PHONY: all i3 fcitx5 xprofile
+.PHONY: all i3 fcitx5 xprofile picom
 
-all: i3 fcitx5 xprofile
+all: i3 fcitx5 xprofile picom
 
 i3:
 	- mkdir -p ~/.config/i3/
@@ -20,3 +20,6 @@ fcitx5:
 
 xprofile:
 	$(call link,xprofile)
+
+picom:
+	$(call link,config/picom.conf)
