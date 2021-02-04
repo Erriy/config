@@ -2,11 +2,11 @@
 # set $lock                   sh ~/.config/scripts/locker.sh
 # dm-tool lock 依赖 light-locker，如果不启用light-locker，则使用ctrl+alt+f7即可越过密码验证
 set $lock                   dm-tool lock
-set $mark_names             $(~/.pyenv/shims/python ~/.config/scripts/mark.py names)
-set $workspace_names        $(~/.pyenv/shims/python ~/.config/scripts/workspace.py names)
-set $workspace_name         $(~/.pyenv/shims/python ~/.config/scripts/workspace.py name)
-set $workspace_kill_all     $(~/.pyenv/shims/python ~/.config/scripts/workspace.py killall)
-set $current_workspace_kill ~/.pyenv/shims/python ~/.config/scripts/workspace.py kill
+set $mark_names             $(python ~/.config/i3/scripts/mark.py names)
+set $workspace_names        $(python ~/.config/i3/scripts/workspace.py names)
+set $workspace_name         $(python ~/.config/i3/scripts/workspace.py name)
+set $workspace_kill_all     $(python ~/.config/i3/scripts/workspace.py killall)
+set $current_workspace_kill python ~/.config/i3/scripts/workspace.py kill
 set $rofi                   rofi -cycle -terminal sakura -location 0 -font "monospace 12" -matching fuzzy
 set $dmenu                  dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p
 # 基础配置 =================================================================================================
@@ -124,7 +124,7 @@ exec --no-startup-id blueman-tray
 
 # 快捷键 ==================================================================================================
 # 启动终端
-bindsym Mod4+Return exec sakura
+bindsym Mod4+Return exec i3-sensible-terminal
 # 音量调整
 # bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master playback 5%+
 # bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master playback 5%-
@@ -159,7 +159,7 @@ set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox m)arkdown, t)
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
-    bindsym v exec --no-startup-id code --new-window, mode "default"
+    bindsym v exec --no-startup-id visual-studio-code --new-window, mode "default"
     # 文件管理器
     bindsym e exec --no-startup-id nemo, mode "default"
     # chrome
