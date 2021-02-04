@@ -11,8 +11,8 @@ set $rofi                   rofi -cycle -terminal sakura -location 0 -font "mono
 set $dmenu                  dmenu -nb '#151515' -nf '#999999' -sb '#ff0000' -sf '#000000' -i -p
 # 基础配置 =================================================================================================
 # Set inner/outer gaps
-gaps inner 8
-gaps outer -4
+gaps inner 4
+gaps outer 2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -59,8 +59,8 @@ client.urgent           #000000 #888800 #FF0000 #000000
 client.placeholder      #000000 #000000 #00FF00 #000000
 client.background       #000000
 bar {
-    status_command    conky -c ~/.config/conkyrc
-    position          bottom
+    status_command    i3status
+    position          top
     mode              hide
     modifier          Mod4
     font pango:monospace 8, FontAwesome 8

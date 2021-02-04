@@ -3,14 +3,12 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-.PHONY: all i3 fcitx5 xprofile picom
+.PHONY: all i3 fcitx5 xprofile picom volumeicon
 
-all: i3 fcitx5 xprofile picom
+all: i3 fcitx5 xprofile picom volumeicon
 
 i3:
-	- mkdir -p ~/.config/i3/
-	$(call link,config/i3/scripts)
-	$(call link,config/i3/config)
+	$(call link,config/i3)
 
 fcitx5:
 	- mkdir -p ~/.local/share/fcitx5/punctuation
@@ -23,3 +21,7 @@ xprofile:
 
 picom:
 	$(call link,config/picom.conf)
+
+volumeicon:
+	$(call link,config/volumeicon)
+
