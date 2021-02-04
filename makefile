@@ -3,9 +3,9 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-.PHONY: all i3 fcitx5 xprofile picom volumeicon
+.PHONY: all i3 fcitx5 xprofile picom volumeicon sound
 
-all: i3 fcitx5 xprofile picom volumeicon
+all: i3 fcitx5 xprofile picom volumeicon sound
 
 i3:
 	$(call link,config/i3)
@@ -25,3 +25,5 @@ picom:
 volumeicon:
 	$(call link,config/volumeicon)
 
+sound:
+	$(call link,asoundrc)
