@@ -5,13 +5,15 @@
 # The following line should contain a sharp s:
 # ß
 # If the above line is not correctly displayed, fix your editor first!
-
 general {
-        colors = true
-        interval = 1
         output_format = "i3bar"
+        colors = false
+        markup = pango
+        interval = 1
+        color_good = '#2f343f'
+        color_degraded = '#ebcb8b'
+        color_bad = '#ba5e57'
 }
-
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "disk /"
@@ -22,7 +24,7 @@ order += "battery all"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = " (%bitrate at %essid) %ip"
+        format_up = "<span background='#00A0FF'>  (%essid) %ip </span>"
         format_down = ""
 }
 
@@ -32,26 +34,27 @@ ethernet _first_ {
 }
 
 battery all {
-        status_full = ""
-        status_chr = ""
+        status_full = "<span background='#FF3B1D'></span>"
+        status_chr = "<span background='#FF3B1D'> %emptytime</span>"
         status_bat = ""
         status_unk = "?"
+        format = "<span background='#474747'> %status %percentage %remaining</span>"
 }
 
 disk "/" {
-        format = " %avail"
+        format = "<span background='#525564'> %avail</span>"
 }
 
 cpu_usage {
-        format = " %usage"
+        format = "<span background='#FF3B1D'>  %usage</span>"
 }
 
 load {
-        format = " %1min"
+        format = "<span background='#dd0a35'>  %1min</span>"
 }
 
 memory {
-        format = " %used/%available"
+        format = "<span background='#f2317f'> %used/%available</span>"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }
