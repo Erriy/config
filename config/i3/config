@@ -59,9 +59,9 @@ client.urgent           #000000 #888800 #FF0000 #000000
 client.placeholder      #000000 #000000 #00FF00 #000000
 client.background       #000000
 bar {
-    status_command    i3status
+    status_command    i3status -c ~/.config/i3/status
     position          bottom
-    mode              hide
+    # mode              hide
     modifier          Mod4
     font pango:monospace 8, FontAwesome 8
     strip_workspace_numbers yes
@@ -105,6 +105,9 @@ exec --no-startup-id feh --bg-fill ~/.config/wallpaper/blackarch_logo_center_192
 # 触摸板双指自然滚动
 exec --no-startup-id synclient VertScrollDelta=-103
 exec --no-startup-id synclient HorizScrollDelta=-103
+exec --no-startup-id synclient TapButton1=1
+exec --no-startup-id synclient TapButton2=3
+exec --no-startup-id synclient TapButton3=0
 # 键盘打字后0.5秒才可响应触摸板事件（防误触
 exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # 启动渲染引擎
@@ -112,13 +115,13 @@ exec --no-startup-id picom -b --config ~/.config/picom.conf
 # 合盖自动锁定
 exec --no-startup-id light-locker
 # 剪贴板管理器
-exec --no-startup-id copyq
+# exec --no-startup-id copyq
 # 启动网络管理器
 exec --no-startup-id nm-applet
 # 启动音量管理器
 exec --no-startup-id volumeicon
 # 启动蓝牙管理器
-exec --no-startup-id blueman-tray
+# exec --no-startup-id blueman-tray
 # 启动键盘操作鼠标工具
 # exec --no-startup-id keynav
 
