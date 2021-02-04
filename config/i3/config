@@ -60,7 +60,7 @@ client.placeholder      #000000 #000000 #00FF00 #000000
 client.background       #000000
 bar {
     status_command    i3status
-    position          top
+    position          bottom
     mode              hide
     modifier          Mod4
     font pango:monospace 8, FontAwesome 8
