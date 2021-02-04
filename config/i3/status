@@ -34,8 +34,8 @@ ethernet _first_ {
 }
 
 battery all {
-        status_full = "<span background='#FF3B1D'></span>"
-        status_chr = "<span background='#FF3B1D'> %emptytime</span>"
+        status_full = ""
+        status_chr = ""
         status_bat = ""
         status_unk = "?"
         format = "<span background='#474747'> %status %percentage %remaining</span>"
