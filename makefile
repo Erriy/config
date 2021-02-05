@@ -3,9 +3,9 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-.PHONY: all i3 fcitx5 xprofile picom volumeicon sound dunst font
+.PHONY: all i3 fcitx5 xprofile picom volumeicon sound dunst font copyq
 
-all: i3 fcitx5 xprofile picom volumeicon sound dunst font
+all: i3 fcitx5 xprofile picom volumeicon sound dunst font copyq
 
 i3:
 	$(call link,config/i3)
@@ -36,3 +36,6 @@ dunst:
 
 font:
 	$(call link,fonts)
+
+copyq:
+	$(call link,config/copyq)
