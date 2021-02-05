@@ -1,0 +1,3 @@
+[submodule "local/share/fcitx5/themes/Material-Color"]
+	path = local/share/fcitx5/themes/Material-Color
+	url = https://github.com/hosxy/Fcitx5-Material-Color.git
