@@ -14,7 +14,8 @@ fcitx5:
 	- mkdir -p ~/.local/share/fcitx5/punctuation
 	$(call link,local/share/fcitx5/punctuation/punc.mb.zh_CN)
 	$(call link,config/fcitx5)
-
+	$(call link,local/share/fcitx5/pinyin/dictionaries)
+	$(call link,local/share/fcitx5/themes)
 
 xprofile:
 	$(call link,xprofile)
