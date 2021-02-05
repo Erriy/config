@@ -13,6 +13,8 @@ EnumerateSkipFirst=False
 EnumerateGroupForwardKeys=
 # Enumerate Input Method Group Backward
 EnumerateGroupBackwardKeys=
+# Default Next page
+NextPage=
 
 [Hotkey/TriggerKeys]
 0=Control+space
@@ -27,9 +29,6 @@ EnumerateGroupBackwardKeys=
 
 [Hotkey/PrevPage]
 0=bracketleft
-
-[Hotkey/NextPage]
-0=bracketright
 
 [Hotkey/PrevCandidate]
 0=Shift+Tab
