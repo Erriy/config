@@ -3,9 +3,9 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-.PHONY: all i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv
+.PHONY: all i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh
 
-all: i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv
+all: i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh
 
 i3:
 	$(call link,config/i3)
@@ -42,3 +42,6 @@ copyq:
 
 pyenv:
 	$(call link,pyenv)
+
+zsh:
+	$(call link,zshrc)
