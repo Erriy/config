@@ -158,13 +158,15 @@ bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "LOCK\nREBOOT\
 # 隐藏/显示i3bar
 bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
-set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox m)arkdown, t)elegram, v)scode, w)ireshark, P)ostman, R)emmina, V)mware, a-c)alc"
+set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox m)arkdown, t)elegram, v)scode, w)ireshark, z)eal, P)ostman, R)emmina, V)mware, a-c)alc"
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
     bindsym v exec --no-startup-id visual-studio-code --new-window, mode "default"
     # 文件管理器
     bindsym e exec --no-startup-id thunar, mode "default"
+    # zeal
+    bindsym z exec --no-startup-id zeal, mode "default"
     # chrome
     bindsym c exec --no-startup-id google-chrome-stable, mode "default"
     # firefox
