@@ -111,7 +111,7 @@ exec --no-startup-id synclient TapButton3=0
 # 键盘打字后0.5秒才可响应触摸板事件（防误触
 exec --no-startup-id syndaemon -i 0.5 -t -K -R -d
 # 启动渲染引擎
-# exec --no-startup-id picom -b --config ~/.config/picom.conf
+exec --no-startup-id picom -b --config ~/.config/picom.conf
 # 合盖自动锁定
 exec --no-startup-id light-locker
 # 剪贴板管理器
