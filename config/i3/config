@@ -162,7 +162,7 @@ set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox m)arkdown, t)
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
-    bindsym v exec --no-startup-id visual-studio-code --new-window, mode "default"
+    bindsym v exec --no-startup-id vscode --new-window, mode "default"
     # 文件管理器
     bindsym e exec --no-startup-id thunar, mode "default"
     # zeal
