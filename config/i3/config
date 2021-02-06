@@ -158,7 +158,7 @@ bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "LOCK\nREBOOT\
 # 隐藏/显示i3bar
 bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
-set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox m)arkdown, t)elegram, v)scode, w)ireshark, z)eal, P)ostman, R)emmina, V)mware, a-c)alc"
+set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox m)arkdown, t)elegram, v)scode, w)ireshark, z)eal, P)ostman, R)emmina, a-c)alc"
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
@@ -180,7 +180,7 @@ mode $mode_open_apps {
     # burpsuite
     bindsym b exec --no-startup-id burpsuite, mode "default"
     # Vmware
-    bindsym Shift+v exec --no-startup-id vmware, mode "default"
+    # bindsym Shift+v exec --no-startup-id vmware, mode "default"
     # Postman
     bindsym Shift+p exec --no-startup-id postman, mode "default"
     # Remmina
