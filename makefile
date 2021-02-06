@@ -13,7 +13,8 @@ i3:
 fcitx5:
 	- mkdir -p ~/.local/share/fcitx5/punctuation
 	git submodule update
-	ln -sfT local/share/fcitx5/themes/Material-Color/theme-red.conf local/share/fcitx5/themes/Material-Color/theme.conf
+	- trash ~/.local/share/fcitx5/themes/Material-Color/theme.conf
+	ln -sfT $(shell pwd)/local/share/fcitx5/themes/Material-Color/theme-red.conf ~/.local/share/fcitx5/themes/Material-Color/theme.conf
 	$(call link,local/share/fcitx5/punctuation/punc.mb.zh_CN)
 	$(call link,config/fcitx5)
 	$(call link,local/share/fcitx5/pinyin/dictionaries)
