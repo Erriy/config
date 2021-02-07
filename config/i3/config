@@ -93,6 +93,7 @@ for_window [class="electronic-wechat"] floating enable sticky enable border pixe
 for_window [class="TelegramDesktop"] floating enable sticky enable border pixel 2
 for_window [class="Nm-connection-editor"] floating enable sticky enable border pixel 2
 for_window [title="alsamixer"] floating enable border pixel 2
+for_window [title="SimpleScreenRecorder"] floating enable border pixel 2
 for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
 for_window [class="Org.gnome.Nautilus"] floating enable border pixel 2
 for_window [class="Thunar"] floating enable border pixel 2
