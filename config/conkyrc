@@ -63,7 +63,7 @@ ${if_up wlp3s0}\
  ${wireless_essid wlp3s0}_${wireless_bitrate wlp3s0}(${addr wlp3s0})  \
 ${endif}\
  ${cpu}%${if_match 25<=${cpu}}(${top cpu 1}-${top name 1})${endif}  \
- ${mem}/${memmax}  \
+ ${mem}/${memmax}  \
  ${fs_used /}/${fs_size /}(${diskio_read}/${diskio_write})  \
 ${if_match "on-line"=="${acpiacadapter}"} ${else}\
 ${if_match 90<=${battery_percent}} ${else}\
