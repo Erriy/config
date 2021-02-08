@@ -3,7 +3,7 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh
+targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh conky
 
 .PHONY: $(targets)
 
@@ -50,3 +50,6 @@ pyenv:
 
 zsh:
 	$(call link,zshrc)
+
+conky:
+	$(call link,config/conkyrc)

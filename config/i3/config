@@ -59,10 +59,11 @@ client.urgent           #000000 #888800 #FF0000 #000000
 client.placeholder      #000000 #000000 #00FF00 #000000
 client.background       #000000
 bar {
-    status_command    i3status -c ~/.config/i3/status
-    position          bottom
-    mode              hide
-    modifier          Mod4
+    # status_command  i3status -c ~/.config/i3/status
+    status_command  conky -c ~/.config/conkyrc
+    position        bottom
+    mode            hide
+    modifier        Mod4
     font pango:monospace 8, FontAwesome 8
     strip_workspace_numbers yes
 

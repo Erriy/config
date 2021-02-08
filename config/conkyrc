@@ -1,0 +1,80 @@
+-- ===================================================================
+--                            conky_bar
+-- Date    : 12/12/2015
+-- Author  : Allen_Qiu
+-- Version : v1.1
+--
+-- 这份配置文件适用于conky1.10之后版本
+-- conky1.10之后配置文档采用lua语法
+-- ===================================================================
+
+conky.config = {
+
+    -- 不输出到X
+    out_to_x = false,
+    out_to_console = true,
+    background = false,
+    double_buffer = false,
+    -- 刷新时间
+    update_interval = 1,
+    -- 运行时间，0为一直运行
+    total_run_times = 0,
+    -- 强制uft8编码，需xft支持
+    override_utf8_locale = false,
+    -- 缩写字符单位
+    short_units = true,
+    -- 监视端口
+    if_up_strictness = 'address',
+    -- cpu数据监测模式，一般选2
+    cpu_avg_samples = 2,
+    -- cpu占用应用的显示宽度
+    top_name_width=8
+
+}
+
+
+conky.text = [[
+${if_up enp0s20f0u4c4i2}\
+ ${upspeed enp0s20f0u4c4i2}/s(${totalup enp0s20f0u4c4i2})  ${downspeed enp0s20f0u4c4i2}/s(${totaldown enp0s20f0u4c4i2})  \
+ ${addr enp0s20f0u4c4i2}  \
+${endif}\
+${if_up enp0s20u2c4i2}\
+ ${upspeed enp0s20u2c4i2}/s(${totalup enp0s20u2c4i2})  ${downspeed enp0s20u2c4i2}/s(${totaldown enp0s20u2c4i2})  \
+ ${addr enp0s20u2c4i2}  \
+${endif}\
+${if_up enp0s20u1c4i2}\
+ ${upspeed enp0s20u1c4i2}/s(${totalup enp0s20u1c4i2})  ${downspeed enp0s20u1c4i2}/s(${totaldown enp0s20u1c4i2})  \
+ ${addr enp0s20u1c4i2}  \
+${endif}\
+${if_up enp0s20u2}\
+ ${upspeed enp0s20u2}/s(${totalup enp0s20u2})  ${downspeed enp0s20u2}/s(${totaldown enp0s20u2})  \
+ ${addr enp0s20u2}  \
+${endif}\
+${if_up enp0s20u1}\
+ ${upspeed enp0s20u1}/s(${totalup enp0s20u1})  ${downspeed enp0s20u1}/s(${totaldown enp0s20u1})  \
+ ${addr enp0s20u1}  \
+${endif}\
+${if_up wlp2s0}\
+ ${upspeed wlp2s0}/s(${totalup wlp2s0})  ${downspeed wlp2s0}/s(${totaldown wlp2s0})  \
+ ${wireless_essid wlp2s0}_${wireless_bitrate wlp2s0}(${addr wlp2s0})  \
+${endif}\
+${if_up wlp3s0}\
+ ${upspeed wlp3s0}/s(${totalup wlp3s0})  ${downspeed wlp3s0}/s(${totaldown wlp3s0})  \
+ ${wireless_essid wlp3s0}_${wireless_bitrate wlp3s0}(${addr wlp3s0})  \
+${endif}\
+ ${cpu}%${if_match 25<=${cpu}}(${top cpu 1}-${top name 1})${endif}  \
+ ${mem}/${memmax}  \
+ ${fs_used /}/${fs_size /}(${diskio_read}/${diskio_write})  \
+${if_match "on-line"=="${acpiacadapter}"} ${else}\
+${if_match 90<=${battery_percent}} ${else}\
+${if_match 60<=${battery_percent}} ${else}\
+${if_match 35<=${battery_percent}} ${else}\
+${if_match 20<=${battery_percent}} ${else}\
+${if_match 10>=${battery_percent}} ${else}\
+${endif}${endif}${endif}${endif}${endif}${endif}\
+${battery_percent}%\
+${if_match "${battery_time}"!=""}\
+(${battery_time})\
+${endif}  \
+ ${time %Y/%m/%d_%a_%H:%M:%S} 
+]]
