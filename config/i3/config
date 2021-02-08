@@ -147,6 +147,8 @@ bindsym Mod4+Print --release exec --no-startup-id flameshot gui
 bindsym Mod4+Shift+q kill
 # 关闭workspace
 bindsym Mod4+Mod1+q exec --no-startup-id (input=$(echo -e "CANCEL\n$workspace_names" | $dmenu "选择要关闭的工作空间($workspace_name) : " ) && [ "CANCEL" != $input ] &&  $current_workspace_kill --name $input)
+# 跟随workspace
+bindsym Mod4+Shift+p sticky toggle
 # rofi启动器，启动软件
 bindsym Mod4+r exec --no-startup-id $rofi -show run
 # 快速切换窗口
