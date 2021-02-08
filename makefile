@@ -3,16 +3,20 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-.PHONY: all i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh
+targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh
 
-all: i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh
+.PHONY: $(targets)
+
+all: $(targets)
+
+init:
+	git submodule update
 
 i3:
 	$(call link,config/i3)
 
 fcitx5:
 	- mkdir -p ~/.local/share/fcitx5/punctuation
-	git submodule update
 	- trash ~/.local/share/fcitx5/themes/Material-Color/theme.conf
 	ln -sfT $(shell pwd)/local/share/fcitx5/themes/Material-Color/theme-red.conf ~/.local/share/fcitx5/themes/Material-Color/theme.conf
 	$(call link,local/share/fcitx5/punctuation/punc.mb.zh_CN)
