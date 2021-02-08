@@ -103,7 +103,7 @@ for_window [class="Qalculate-gtk"] floating enable sticky enable border pixel 2
 for_window [urgent=latest] focus
 # 自动启动 =================================================================================================
 # 设置壁纸
-exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper/gentoo1.png
+exec --no-startup-id feh --bg-fill /etc/lightdm/wallpaper
 # 触摸板双指自然滚动
 exec --no-startup-id synclient VertScrollDelta=-103
 exec --no-startup-id synclient HorizScrollDelta=-103

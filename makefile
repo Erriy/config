@@ -3,7 +3,7 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh conky
+targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh conky lightdm
 
 .PHONY: $(targets)
 
@@ -53,3 +53,8 @@ zsh:
 
 conky:
 	$(call link,config/conkyrc)
+
+lightdm:
+	sudo ln -sfT $(shell pwd)/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+	sudo ln -sfT $(shell pwd)/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
+	sudo ln -sfT $(shell pwd)/wallpaper/gentoo1.png /etc/lightdm/wallpaper
