@@ -57,5 +57,6 @@ conky:
 
 lightdm:
 	sudo ln -sfT $(shell pwd)/lightdm/lightdm.conf /etc/lightdm/lightdm.conf
+	sudo ln -sfT $(shell pwd)/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 	sudo ln -sfT $(shell pwd)/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 	sudo ln -sfT $(shell pwd)/wallpaper/gentoo1.png /etc/lightdm/wallpaper
