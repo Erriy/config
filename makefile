@@ -1,5 +1,6 @@
 define link
 	- trash ~/.$(1)
+	mkdir -p $(shell dirname ~/.$(1))
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
@@ -43,7 +44,7 @@ font:
 	$(call link,fonts)
 
 copyq:
-	$(call link,config/copyq)
+	$(call link,config/copyq/copyq.conf)
 
 pyenv:
 	$(call link,pyenv)
