@@ -105,6 +105,8 @@ for_window [urgent=latest] focus
 # 设置壁纸
 exec --no-startup-id feh --bg-fill /etc/lightdm/wallpaper
 # 使用mtrack了，支持三指拖拽
+# 打字时禁止触摸板事件
+exec --no-startup-id dispad -F
 # 触摸板双指自然滚动 && 键盘打字后0.5秒才可响应触摸板事件（防误触
 # exec --no-startup-id synclient VertScrollDelta=-103 HorizScrollDelta=-103 TapButton1=1 TapButton2=3 TapButton3=0 && syndaemon -i 0.5 -t -K -R -d
 # 启动渲染引擎
