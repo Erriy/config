@@ -4,7 +4,7 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh conky lightdm
+targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh conky lightdm mtrack
 
 .PHONY: $(targets)
 
@@ -60,3 +60,6 @@ lightdm:
 	# sudo ln -sfT $(shell pwd)/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 	sudo ln -sfT $(shell pwd)/lightdm/slick-greeter.conf /etc/lightdm/slick-greeter.conf
 	sudo ln -sfT $(shell pwd)/wallpaper/gentoo1.png /etc/lightdm/wallpaper
+
+mtrack:
+	sudo ln -sfT $(shell pwd)/mtrack/50-mtrack.conf /etc/X11/xorg.conf.d/50-mtrack.conf
