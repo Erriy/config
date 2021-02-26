@@ -4,7 +4,7 @@ define link
 	ln -sfT $(shell pwd)/$(1) ~/.$(1)
 endef
 
-targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh conky lightdm mtrack
+targets = i3 fcitx5 xprofile picom volumeicon sound dunst font copyq pyenv zsh conky lightdm mtrack dwm
 
 .PHONY: $(targets)
 
@@ -63,3 +63,6 @@ lightdm:
 
 mtrack:
 	sudo ln -sfT $(shell pwd)/mtrack/50-mtrack.conf /etc/X11/xorg.conf.d/50-mtrack.conf
+
+dwm:
+	sudo ln -sfT $(shell pwd)/config/dwm/dwm.h /etc/portage/savedconfig/x11-wm/dwm-6.2
