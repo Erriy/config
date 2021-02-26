@@ -150,7 +150,9 @@ bindsym Mod4+Mod1+q exec --no-startup-id (input=$(echo -e "CANCEL\n$workspace_na
 # 跟随workspace
 bindsym Mod4+Shift+p sticky toggle
 # rofi启动器，启动软件
-bindsym Mod4+r exec --no-startup-id $rofi -show run
+# bindsym Mod4+r exec --no-startup-id $rofi -show run
+# dmenu 启动器
+bindsym Mod4+r exec --no-startup-id dmenu_run
 # 快速切换窗口
 bindsym Mod4+Tab exec --no-startup-id $rofi -show window
 # 系统锁定
