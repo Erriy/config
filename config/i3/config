@@ -99,6 +99,7 @@ for_window [class="Lxappearance"] floating enable sticky enable border pixel 2
 for_window [class="Org.gnome.Nautilus"] floating enable border pixel 2
 for_window [class="Thunar"] floating enable border pixel 2
 for_window [class="Qalculate-gtk"] floating enable sticky enable border pixel 2
+for_window [class="qv2ray"] floating enable sticky enable border pixel 2
 # 自动跳转到紧急窗口
 for_window [urgent=latest] focus
 # 自动启动 =================================================================================================
@@ -115,6 +116,8 @@ exec --no-startup-id picom -b --config ~/.config/picom.conf
 exec --no-startup-id light-locker
 # 剪贴板管理器
 exec --no-startup-id copyq
+# 启动代理
+exec --no-startup-id qv2ray
 # 启动网络管理器
 exec --no-startup-id nm-applet
 # 启动音量管理器
@@ -159,7 +162,7 @@ bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "LOCK\nREBOOT\
 # 隐藏/显示i3bar
 bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
-set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox, m)arkdown, t)elegram, v)scode, w)ireshark, z)athura, P)ostman, R)emmina, Z)eal, a-c)alc"
+set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox, m)arkdown, t)elegram, v)scode, w)ireshark, z)athura, C)hromium, P)ostman, R)emmina, Z)eal, a-c)alc"
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
@@ -183,6 +186,8 @@ mode $mode_open_apps {
     # Vmware
     # bindsym Shift+v exec --no-startup-id vmware, mode "default"
     bindsym z exec --no-startup-id zathura, mode "default"
+    # chrome
+    bindsym Shift+c exec --no-startup-id chromium, mode "default"
     # Postman
     bindsym Shift+p exec --no-startup-id postman, mode "default"
     # Remmina
