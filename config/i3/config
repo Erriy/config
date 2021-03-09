@@ -100,6 +100,7 @@ for_window [class="Org.gnome.Nautilus"] floating enable border pixel 2
 for_window [class="Thunar"] floating enable border pixel 2
 for_window [class="Qalculate-gtk"] floating enable sticky enable border pixel 2
 for_window [class="qv2ray"] floating enable sticky enable border pixel 2
+for_window [class="Blueman-manager"] floating enable sticky enable border pixel 2
 # 自动跳转到紧急窗口
 for_window [urgent=latest] focus
 # 自动启动 =================================================================================================
@@ -111,7 +112,7 @@ exec --no-startup-id dispad -F
 # 触摸板双指自然滚动 && 键盘打字后0.5秒才可响应触摸板事件（防误触
 # exec --no-startup-id synclient VertScrollDelta=-103 HorizScrollDelta=-103 TapButton1=1 TapButton2=3 TapButton3=0 && syndaemon -i 0.5 -t -K -R -d
 # 启动渲染引擎
-exec --no-startup-id picom -b --config ~/.config/picom.conf
+# exec --no-startup-id picom -b --config ~/.config/picom.conf
 # 合盖自动锁定
 exec --no-startup-id light-locker
 # 剪贴板管理器
@@ -123,7 +124,7 @@ exec --no-startup-id nm-applet
 # 启动音量管理器
 exec --no-startup-id volumeicon
 # 启动蓝牙管理器
-# exec --no-startup-id blueman-tray
+exec --no-startup-id blueman-tray
 # 启动键盘操作鼠标工具
 # exec --no-startup-id keynav
 
