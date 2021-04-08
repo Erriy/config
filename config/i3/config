@@ -183,7 +183,7 @@ mode $mode_open_apps {
     # wireshark
     bindsym w exec --no-startup-id wireshark, mode "default"
     # typora
-    bindsym m exec --no-startup-id Typora, mode "default"
+    bindsym m exec --no-startup-id typora, mode "default"
     # burpsuite
     bindsym b exec --no-startup-id burpsuite, mode "default"
     # Vmware
