@@ -165,7 +165,7 @@ bindsym Control+Mod1+Delete exec --no-startup-id (input=$(echo -e "LOCK\nREBOOT\
 # 隐藏/显示i3bar
 bindsym Mod4+Mod1+m bar mode toggle
 # 快速启动app
-set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, f)irefox, m)arkdown, t)elegram, v)scode, w)ireshark, z)athura, C)hromium, P)ostman, R)emmina, Z)eal, a-c)alc"
+set $mode_open_apps "open: b)urpsuite, c)hrome, e)xplore, m)arkdown, t)elegram, v)scode, w)ireshark, z)athura, C)hromium, P)ostman, R)emmina, Z)eal, a-c)alc"
 bindsym Mod4+o mode $mode_open_apps
 mode $mode_open_apps {
     # vscode
@@ -177,7 +177,7 @@ mode $mode_open_apps {
     # chrome
     bindsym c exec --no-startup-id google-chrome-stable, mode "default"
     # firefox
-    bindsym f exec --no-startup-id firefox, mode "default"
+    # bindsym f exec --no-startup-id firefox, mode "default"
     # telegram
     bindsym t exec --no-startup-id telegram-desktop, mode "default"
     # wireshark
