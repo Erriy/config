@@ -100,6 +100,7 @@ for_window [class="Org.gnome.Nautilus"] floating enable border pixel 2
 for_window [class="Thunar"] floating enable border pixel 2
 for_window [class="Qalculate-gtk"] floating enable sticky enable border pixel 2
 for_window [class="qv2ray"] floating enable sticky enable border pixel 2
+for_window [class="qTox"] floating enable sticky enable border pixel 2
 for_window [class="Blueman-manager"] floating enable sticky enable border pixel 2
 # 自动跳转到紧急窗口
 for_window [urgent=latest] focus
